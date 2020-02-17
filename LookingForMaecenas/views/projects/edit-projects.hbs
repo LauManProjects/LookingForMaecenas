@@ -1,0 +1,50 @@
+<h1>Edita un proyecto</h1>
+
+<p>{{name}}</p>
+<p>{{lastName}}</p>
+
+<form action="/projects/edit-projects" method="POST">
+
+<div class="form-group">
+  <label for="id-input">Selecciona un Proyecto</label>
+  <input name="name" type="text" class="form-control" id="name-input">
+      <select name="select" id=""></select>
+      <option value=""></option>
+
+</div>
+
+  <div class="form-group">
+    <label for="name-input">Nombre</label>
+    <input name="name" type="text" class="form-control" id="name-input" value={{name}}>
+  </div>
+  <div class="form-group">
+    <label for="location-input">Localización</label>
+    <input name="location" type="text" class="form-control" id="location-input">
+  </div>
+  <div class="form-group">
+    <label for="date-input">Fecha</label>
+    <input name="date" type="text" class="form-control" id="daten-input">
+  </div>
+  <div class="form-group">
+    <label for="colaborationType-input">Tipo de colaboración</label>
+    <input name="colaborationType" type="text" class="form-control" id="colaborationType-input">
+  </div>
+  <div class="form-group">
+    <label for="projectDescription-input">Descripción del proyecto</label>
+    <input name="projectDescription" type="text" class="form-control" id="projectDescription-input">
+  </div>
+  <div class="form-group">
+    <label for="projectTracking-input">Estado del proyecto</label>
+    <input name="projectTracking" type="text" class="form-control" id="projectTracking-input">
+  </div>
+  <div class="form-group">
+    <label for="totalRaised-input">Total recaudado</label>
+    <input name="totalRaised" type="text" class="form-control" id="totalRaised-input">
+  </div>
+  <div class="form-group">
+    <label for="totalRequired-input">Total requerido</label>
+    <input name="totalRequired" type="text" class="form-control" id="totalRequired-input">
+  </div>
+
+  <button type="submit" class="btn btn-dark">Crear proyecto</button>
+  </form>
