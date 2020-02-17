@@ -2,25 +2,25 @@
 
 <form action="/auths/signup" method="POST" id="form-container">
   <label for="Nombre">Nombre</label>
-  <input id="nombre" type="text" name="name" placeholder="JonSnow">
+  <input id="nombre" type="text" name="nombre" placeholder="JonSnow" value="dani">
   <br><br>
   <label for="apellidos">Apellidos</label>
-  <input id="apellidos" type="text" name="apellidos" placeholder="Pon tu Apellido">
+  <input id="apellidos" type="text" name="apellidos" placeholder="Pon tu Apellido" value="vicario">
   <br><br>
   <label for="email">Email</label>
-  <input id="email" type="email" name="email" placeholder="Pon tu Email">
-  <br><br>
-  <label for="telefono">Telefono</label>
-  <input id="telefono" type="Number" name="telefono" placeholder="Pon tu Telefono">
+  <input id="email" type="email" name="email" placeholder="Pon tu Email"  value="test@test.com">
   <br><br>
   <label for="password">Password</label>
-  <input id="password" type="password" name="password" placeholder="Your password">
+  <input id="password" type="password" name="password" placeholder="Your password" value="123">
+  <br><br>
+  <label for="telefono">Telefono</label>
+  <input id="telefono" type="Number" name="telefono" placeholder="Pon tu Telefono" value="123">
   <br><br>
   <label for="location">Location</label>
-  <input id="location" type="text" name="location" placeholder="Pon tu domicilio">
+  <input id="location" type="text" name="location" placeholder="Pon tu domicilio" value="123">
   <br><br>
   <label for="type">Tipo de colaboración</label>
-  <select name="select">
+  <select name="type">
     <option value="Admin">Admin</option>
     <option value="Economic Maecenas" selected>Economic Maecenas</option>
     <option value="Technical Maecenas" >Technical Maecenas</option>
@@ -28,10 +28,10 @@
   </select>
   <br><br>
   <label for="personalDescription">Describe tu tipo de colaboración</label>
-  <input id="personalDescription" type="text" name="personalDescription" placeholder="¿Cómo eres?">
+  <input id="personalDescription" type="text" name="personalDescription" placeholder="¿Cómo eres?"  value="majo majo">
   <br><br>
   <label for="economicContribution">Aportación economica</label>
-  <input id="economicContribution" type="Number" name="economicContribution" placeholder="¿Cuanto dinero vas a aportar?">
+  <input id="economicContribution" type="Number" name="economicContribution" placeholder="¿Cuanto dinero vas a aportar?"  value="9999">
   <br><br>
   <label for="project_Id">Id del proyecto</label>
   <input id="project_Id" type="String" name="project_Id" placeholder="El id de tu proyecto">
@@ -47,6 +47,6 @@
   <h3 class="account-message">
     ¿Ya tienes una cuenta?
     <br><br>
-    <a href="/login">Login</a>
+    <a href="/auths/login">Login</a>
   </p>
 </form>
