@@ -1,0 +1,52 @@
+<h2>Signup</h2>
+
+<form action="/auths/signup" method="POST" id="form-container">
+  <label for="Nombre">Nombre</label>
+  <input id="nombre" type="text" name="name" placeholder="JonSnow">
+  <br><br>
+  <label for="apellidos">Apellidos</label>
+  <input id="apellidos" type="text" name="apellidos" placeholder="Pon tu Apellido">
+  <br><br>
+  <label for="email">Email</label>
+  <input id="email" type="email" name="email" placeholder="Pon tu Email">
+  <br><br>
+  <label for="telefono">Telefono</label>
+  <input id="telefono" type="Number" name="telefono" placeholder="Pon tu Telefono">
+  <br><br>
+  <label for="password">Password</label>
+  <input id="password" type="password" name="password" placeholder="Your password">
+  <br><br>
+  <label for="location">Location</label>
+  <input id="location" type="text" name="location" placeholder="Pon tu domicilio">
+  <br><br>
+  <label for="type">Tipo de colaboración</label>
+  <select name="select">
+    <option value="Admin">Admin</option>
+    <option value="Economic Maecenas" selected>Economic Maecenas</option>
+    <option value="Technical Maecenas" >Technical Maecenas</option>
+    <option value="Tourist Maecenas">Tourist Maecenas</option>
+  </select>
+  <br><br>
+  <label for="personalDescription">Describe tu tipo de colaboración</label>
+  <input id="personalDescription" type="text" name="personalDescription" placeholder="¿Cómo eres?">
+  <br><br>
+  <label for="economicContribution">Aportación economica</label>
+  <input id="economicContribution" type="Number" name="economicContribution" placeholder="¿Cuanto dinero vas a aportar?">
+  <br><br>
+  <label for="project_Id">Id del proyecto</label>
+  <input id="project_Id" type="String" name="project_Id" placeholder="El id de tu proyecto">
+
+  {{#if message}}
+  <div class="error-message">{{ message }}</div>
+  {{/if}}
+  <br><br>
+
+  <button>Create account</button>
+
+  <br><br>
+  <h3 class="account-message">
+    ¿Ya tienes una cuenta?
+    <br><br>
+    <a href="/login">Login</a>
+  </p>
+</form>

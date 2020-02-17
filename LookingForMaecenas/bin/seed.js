@@ -50,7 +50,7 @@ const dataAdmin = [
     name: "Filogonio",
     lastName: "Ptolomeo",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
-    email: "Filogonio@gmail.com",
+    email: "filogonio@gmail.com",
     phone: 637125689,
     location: {
       lat: 42.6695044,
@@ -65,7 +65,7 @@ const dataAdmin = [
     name: "Marciana",
     lastName: "Freire",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
-    email: "Marciana@gmail.com",
+    email: "marciana@gmail.com",
     phone: 645257856,
     location: {
       lat: 42.2172423,
@@ -74,13 +74,13 @@ const dataAdmin = [
     type: "Admin",
     personalDescription: "Granjera en una pequeña aldea de Vigo. No solo quiero vender mis productos, tambien quiero que conozcan mi aldea y sus costumbres",
     economicContribution: 0,
-    project_id: const2
+    project_id: const4
   },{
     _id: const5,
     name: "Pepiño",
     lastName: "Nogueira",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
-    email: "Pepiño@gmail.com",
+    email: "pepiño@gmail.com",
     phone: 645247856,
     location: {
       lat: 42.6695044,
@@ -89,7 +89,7 @@ const dataAdmin = [
     type: "Admin",
     personalDescription: "El archivo de Catoria se esta perdiendo y no podemos empezar a restaurarlo por problemas legales, necesitamos de tu ayuda",
     economicContribution: 0,
-    project_id: const2
+    project_id: const6
   },
   // Colaboradores
 
@@ -99,7 +99,7 @@ const dataAdmin = [
     name: nombres[numNombre],
     lastName:  apellidos[numApellidos],
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
-    email: `${nombres[numNombre]}`+"@gmail.com",
+    email: `${nombres[numNombre].toLowerCase()}`+ `${apellidos[numApellidos].toLowerCase()}` +"@gmail.com",
     phone: "658652893",
     location: {
       lat: 42.6695044,
@@ -114,7 +114,7 @@ const dataAdmin = [
     name: nombres[numNombre1],
     lastName:  apellidos[numApellidos1],
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
-    email: `${nombres[numNombre1]}`+"@gmail.com",
+    email: `${nombres[numNombre1].toLowerCase()}`+ `${apellidos[numApellidos1].toLowerCase()}`+ "@gmail.com",
     phone: 689451235,
     type: "Economic Maecenas",
     location: {
@@ -128,7 +128,7 @@ const dataAdmin = [
     name: nombres[numNombre2],
     lastName:  apellidos[numApellidos2],
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
-    email: `${nombres[numNombre2]}`+"@gmail.com",
+    email: `${nombres[numNombre2].toLowerCase()}`+ `${apellidos[numApellidos2].toLowerCase()}` + "@gmail.com",
     phone: "685251435",
     location: {
       lat: 42.6695044,
@@ -142,7 +142,7 @@ const dataAdmin = [
     name: nombres[numNombre3],
     lastName:  apellidos[numApellidos3],
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
-    email: `${nombres[numNombre3]}`+"@gmail.com",
+    email: `${nombres[numNombre3].toLowerCase()}`+ `${apellidos[numApellidos3].toLowerCase()}`+"@gmail.com",
     phone: "685214535",
     location: {
       lat: 42.6695044,
@@ -156,7 +156,7 @@ const dataAdmin = [
     name: nombres[numNombre4],
     lastName:  apellidos[numApellidos4],
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
-    email: `${nombres[numNombre4]}`+"@gmail.com",
+    email: `${nombres[numNombre4].toLowerCase()}`+ `${apellidos[numApellidos4].toLowerCase()}` +"@gmail.com",
     phone: "658745214",
     location: {
       lat: 42.6695044,
@@ -170,7 +170,7 @@ const dataAdmin = [
     name: nombres[numNombre5],
     lastName:  apellidos[numApellidos5],
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
-    email: `${nombres[numNombre5]}`+"@gmail.com",
+    email: `${nombres[numNombre5].toLowerCase()}`+ `${apellidos[numApellidos5].toLowerCase()}`+ "@gmail.com",
     phone: "652152358",
     location: {
       lat: 42.6695044,
@@ -226,7 +226,7 @@ const project = [{
 }, ]
 
 mongoose
-  .connect('mongodb://localhost/starter-code', {
+  .connect('mongodb://localhost/lookingformecenas', {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
