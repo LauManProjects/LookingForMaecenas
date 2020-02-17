@@ -8,8 +8,8 @@ passport.use(new LocalStrategy(
     passReqToCallback: true
   },
   (req, username, password, done) => {
-    console.log("done 1")
-    console.log(req.body)
+    // console.log("done 1")
+    // console.log(req.body)
     // console.log(password)
     // console.log(done)
 
