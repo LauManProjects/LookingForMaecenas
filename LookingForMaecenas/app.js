@@ -1,13 +1,13 @@
 require('dotenv').config();
 
-const bodyParser = require('body-parser');
+const bodyParser   = require('body-parser');
 const cookieParser = require('cookie-parser');
-const express = require('express');
-const favicon = require('serve-favicon');
-const hbs = require('hbs');
-const mongoose = require('mongoose');
-const logger = require('morgan');
-const path = require('path');
+const express      = require('express');
+const favicon      = require('serve-favicon');
+const hbs          = require('hbs');
+const mongoose     = require('mongoose');
+const logger       = require('morgan');
+const path         = require('path');
 
 //Passport
 const passport = require("passport");
@@ -17,9 +17,7 @@ const MongoStore = require('connect-mongo')(session);
 const flash = require("connect-flash");
 
 mongoose
-  .connect('mongodb://localhost/lookingformecenas', {
-    useNewUrlParser: true
-  })
+  .connect('mongodb://localhost/lookingformecenas', {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -35,9 +33,7 @@ const app = express();
 // Middleware Setup
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-  extended: false
-}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // Middelware Passport 
@@ -84,13 +80,7 @@ app.use('/', index);
 const auths = require('./routes/auths');
 app.use('/auths', auths);
 
-//app.use('/user', require('./routes/users.routes'))
-
 const projects = require('./routes/projects');
-app.use('/projects', projects);
-
-// app.use('/projects', require('./routes/projects'))
-
-
+app.use('/projects', projects)
 
 module.exports = app;
