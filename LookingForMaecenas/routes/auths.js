@@ -69,7 +69,7 @@ router.post("/signup", (req, res, next) => {
       if (err) {
         res.render("auths/signup", { message: "Something went wrong" });
       } else {
-        res.redirect("/auths/index");
+        res.redirect("/auths/login");
       }
     });
   })
@@ -144,11 +144,7 @@ router.post("/signup", (req, res, next) => {
 // Log In
 
 router.get("/login", (req, res, next) => {
-  res.render("auths/login");
-});
-
-router.get("/login", (req, res, next) => {
-  res.render("auth/login", { "message": req.flash("error") });
+  res.render("auths/login", { "message": req.flash("error") });
 });
 
 router.post("/login", passport.authenticate("local", {
@@ -158,33 +154,56 @@ router.post("/login", passport.authenticate("local", {
   passReqToCallback: true
 }));
 
+
+
 // Role CheckIn
 
 function checkRoles(role) {
   return function(req, res, next) {
     if (req.isAuthenticated() && req.user.type === role) {
       return next();
+      console.log('Hecho')
     } else {
-      res.redirect('/login')
+      res.redirect('/auths/login')
     }
   }
 }
 
 const checkAdmin  = checkRoles('Admin');
 const checkEconomic = checkRoles('Economic Maecenas');
-const checkTechnical  = checkRoles('Technical Maecenas');
-const checkTourist  = checkRoles('Torist Maecenas');
+const checkTech = checkRoles('Technical Maecenas');
+const checkTourist = checkRoles('Tourist Maecenas');
 
 
-router.get("/private-page", checkEconomic, (req, res) => {
-  res.render("auths/private-page", { user: req.user });
+// Redireccionador de Rutas
+
+router.get("/private-page", (req, res) => {
+  if (req.user.type === "Admin") {
+    res.redirect("/auths/private-admin")
+  } else if (req.user.type !== "Admin") {
+    res.redirect("/auths/private-colaborator")
+  } else {
+    res.redirect("/auths/login")
+  }
 });
 
+// Homes por rutas
 
+router.get("/private-admin", checkAdmin, (req,res) => {
+  res.render("auths/private-Admin", req.user)
+  console.log(req.user)
+})
+
+router.get("/private-colaborator", checkEconomic || checkTech ||  checkTourist, (req,res) => {
+  res.render("auths/private-Colaborator", req.user)
+})
+
+// Log Out
 
 router.get("/logout", (req, res) => {
   req.logout();
   res.redirect("/auths/login");
 });
+
 
 module.exports = router;
