@@ -85,7 +85,11 @@ const auths = require('./routes/auths');
 app.use('/auths', auths);
 
 //app.use('/user', require('./routes/users.routes'))
-app.use('/projects', require('./routes/projects'))
+
+const projects = require('./routes/projects');
+app.use('/projects', projects);
+
+// app.use('/projects', require('./routes/projects'))
 
 
 

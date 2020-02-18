@@ -2,7 +2,8 @@ require('dotenv').config();
 const mongoose = require('mongoose')
 const User = require('../models/user')
 const Project = require('../models/project')
-const bcrypt = require("bcrypt")
+const bcry
+pt = require("bcrypt")
 const bcryptSalt = 10;​
 const1 = new mongoose.mongo.ObjectId();
 const2 = new mongoose.mongo.ObjectId();
@@ -65,7 +66,7 @@ const dataAdmin = [
     personalDescription: "Granjera en una pequeña aldea de Vigo. No solo quiero vender mis productos, tambien quiero que conozcan mi aldea y sus costumbres",
     economicContribution: 0,
     project_id: const4
-  },{
+  }, {
     _id: const5,
     name: "Pepiño",
     lastName: "Nogueira",
@@ -89,7 +90,7 @@ const dataAdmin = [
     name: nombres[numNombre],
     lastName: apellidos[numApellidos],
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
-    email: `${nombres[numNombre].toLowerCase()}`+ `${apellidos[numApellidos].toLowerCase()}` +"@gmail.com",
+    email: `${nombres[numNombre].toLowerCase()}` + `${apellidos[numApellidos].toLowerCase()}` + "@gmail.com",
     phone: "658652893",
     location: {
       lat: 42.6695044,
@@ -104,7 +105,7 @@ const dataAdmin = [
     name: nombres[numNombre1],
     lastName: apellidos[numApellidos1],
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
-    email: `${nombres[numNombre1].toLowerCase()}`+ `${apellidos[numApellidos1].toLowerCase()}`+ "@gmail.com",
+    email: `${nombres[numNombre1].toLowerCase()}` + `${apellidos[numApellidos1].toLowerCase()}` + "@gmail.com",
     phone: 689451235,
     type: "Economic Maecenas",
     location: {
@@ -118,7 +119,7 @@ const dataAdmin = [
     name: nombres[numNombre2],
     lastName: apellidos[numApellidos2],
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
-    email: `${nombres[numNombre2].toLowerCase()}`+ `${apellidos[numApellidos2].toLowerCase()}` + "@gmail.com",
+    email: `${nombres[numNombre2].toLowerCase()}` + `${apellidos[numApellidos2].toLowerCase()}` + "@gmail.com",
     phone: "685251435",
     location: {
       lat: 42.6695044,
@@ -132,7 +133,7 @@ const dataAdmin = [
     name: nombres[numNombre3],
     lastName: apellidos[numApellidos3],
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
-    email: `${nombres[numNombre3].toLowerCase()}`+ `${apellidos[numApellidos3].toLowerCase()}`+"@gmail.com",
+    email: `${nombres[numNombre3].toLowerCase()}` + `${apellidos[numApellidos3].toLowerCase()}` + "@gmail.com",
     phone: "685214535",
     location: {
       lat: 42.6695044,
@@ -146,7 +147,7 @@ const dataAdmin = [
     name: nombres[numNombre4],
     lastName: apellidos[numApellidos4],
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
-    email: `${nombres[numNombre4].toLowerCase()}`+ `${apellidos[numApellidos4].toLowerCase()}` +"@gmail.com",
+    email: `${nombres[numNombre4].toLowerCase()}` + `${apellidos[numApellidos4].toLowerCase()}` + "@gmail.com",
     phone: "658745214",
     location: {
       lat: 42.6695044,
@@ -160,7 +161,7 @@ const dataAdmin = [
     name: nombres[numNombre5],
     lastName: apellidos[numApellidos5],
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
-    email: `${nombres[numNombre5].toLowerCase()}`+ `${apellidos[numApellidos5].toLowerCase()}`+ "@gmail.com",
+    email: `${nombres[numNombre5].toLowerCase()}` + `${apellidos[numApellidos5].toLowerCase()}` + "@gmail.com",
     phone: "652152358",
     location: {
       lat: 42.6695044,
@@ -211,6 +212,10 @@ const project = [{
   projectDescription: "Necesitamos ayuda tecnica para comenzar la restauración del archivo local. Abogados para asesoramiento legal y restauradores para empezar el proyecto",
   adminId: const5
 }, ]​
+
+
+
+
 mongoose
   .connect('mongodb://localhost/lookingformecenas', {
     useNewUrlParser: true,
@@ -245,9 +250,3 @@ mongoose
   .catch(err => {
     console.error("Error connecting to mongo", err);
   });
-
-
-
-
-
-
