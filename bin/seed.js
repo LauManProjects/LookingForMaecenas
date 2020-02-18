@@ -226,7 +226,7 @@ const project = [{
 } ];
 
 mongoose
-  .connect(`${process.env.DBURL}`, {
+  .connect("mongodb+srv://admin:admin@cluster0-tctvt.mongodb.net/test2?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
