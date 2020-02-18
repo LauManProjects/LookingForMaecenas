@@ -17,7 +17,8 @@ const MongoStore = require('connect-mongo')(session);
 const flash = require("connect-flash");
 
 mongoose
-  .connect('mongodb://localhost/lookingformecenas', {useNewUrlParser: true})
+  .connect(`${process.env.DBURl}`, { useNewUrlParser: true
+  })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
