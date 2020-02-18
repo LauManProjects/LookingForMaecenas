@@ -3,20 +3,22 @@ const mongoose = require('mongoose')
 const User = require('../models/user')
 const Project = require('../models/project')
 const bcrypt = require("bcrypt")
-const bcryptSalt = 10
+const bcryptSalt = 10;
 
 const1 = new mongoose.mongo.ObjectId();
 const2 = new mongoose.mongo.ObjectId();
 const3 = new mongoose.mongo.ObjectId();
 const4 = new mongoose.mongo.ObjectId();
 const5 = new mongoose.mongo.ObjectId();
-// const6 = new mongoose.mongo.ObjectId();​​
+const6 = new mongoose.mongo.ObjectId();
+
 
 const nombres = ["Filogonia", "Digna Marciana", "Clodoveo", "Licerio", "Vistila", "Firmo", "Filadelfo", "Ninfodora", "Canuto", "Baraquisio", "Austiquiliano", "Virisima"]
 const apellidos = ["Perez", "Sanchez", "Fernandez", "Lopez", "Saez", "Rey", "Alvarez"]
-// const type = ["Economic Maecenas", "Technical Maecenas", "Tourist Maecenas"]​
+const type = ["Economic Maecenas", "Technical Maecenas", "Tourist Maecenas"]
 
-// Nombres Random​
+// Nombres Random
+
 const numNombre = Math.floor(Math.random() * 11 + 1);
 const numApellidos = Math.floor(Math.random() * 6 + 1);
 const numNombre1 = Math.floor(Math.random() * 11 + 1);
@@ -29,15 +31,18 @@ const numNombre4 = Math.floor(Math.random() * 11 + 1);
 const numApellidos4 = Math.floor(Math.random() * 6 + 1);
 const numNombre5 = Math.floor(Math.random() * 11 + 1);
 const numApellidos5 = Math.floor(Math.random() * 6 + 1);
+const numNombre6 = Math.floor(Math.random() * 11 + 1);
+const numApellidos6 = Math.floor(Math.random() * 6 + 1);
 
+const numType = Math.floor(Math.random() * 3 + 1)
 
-// const numNombre6 = Math.floor(Math.random() * 11 + 1);
-// const numApellidos6 = Math.floor(Math.random() * 6 + 1);​
-// const numType = Math.floor(Math.random() * 3 + 1)​​​
 
 
 // nombres[numNombre]
 // apellidos[numApellidos]
+
+
+
 const dataAdmin = [
   //Administradores
   {
@@ -86,9 +91,13 @@ const dataAdmin = [
     economicContribution: 0,
     project_id: const6
   },
+  // Colaboradores
+
+  // nombres[numNombre]
+  // apellidos[numApellidos]
   {
     name: nombres[numNombre],
-    lastName: apellidos[numApellidos],
+    lastName:  apellidos[numApellidos],
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     email: `${nombres[numNombre].toLowerCase()}`+ `${apellidos[numApellidos].toLowerCase()}` +"@gmail.com",
     phone: "658652893",
@@ -103,7 +112,7 @@ const dataAdmin = [
   },
   {
     name: nombres[numNombre1],
-    lastName: apellidos[numApellidos1],
+    lastName:  apellidos[numApellidos1],
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     email: `${nombres[numNombre1].toLowerCase()}`+ `${apellidos[numApellidos1].toLowerCase()}`+ "@gmail.com",
     phone: 689451235,
@@ -117,7 +126,7 @@ const dataAdmin = [
     project_id: const2
   }, {
     name: nombres[numNombre2],
-    lastName: apellidos[numApellidos2],
+    lastName:  apellidos[numApellidos2],
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     email: `${nombres[numNombre2].toLowerCase()}`+ `${apellidos[numApellidos2].toLowerCase()}` + "@gmail.com",
     phone: "685251435",
@@ -131,7 +140,7 @@ const dataAdmin = [
     project_id: const4
   }, {
     name: nombres[numNombre3],
-    lastName: apellidos[numApellidos3],
+    lastName:  apellidos[numApellidos3],
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     email: `${nombres[numNombre3].toLowerCase()}`+ `${apellidos[numApellidos3].toLowerCase()}`+"@gmail.com",
     phone: "685214535",
@@ -145,7 +154,7 @@ const dataAdmin = [
     project_id: const4
   }, {
     name: nombres[numNombre4],
-    lastName: apellidos[numApellidos4],
+    lastName:  apellidos[numApellidos4],
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     email: `${nombres[numNombre4].toLowerCase()}`+ `${apellidos[numApellidos4].toLowerCase()}` +"@gmail.com",
     phone: "658745214",
@@ -157,10 +166,9 @@ const dataAdmin = [
     personalDescription: "Abogado comprometido con la españa vaciada",
     economicContribution: 0,
     project_id: const6
-  }, 
-  {
+  }, {
     name: nombres[numNombre5],
-    lastName: apellidos[numApellidos5],
+    lastName:  apellidos[numApellidos5],
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     email: `${nombres[numNombre5].toLowerCase()}`+ `${apellidos[numApellidos5].toLowerCase()}`+ "@gmail.com",
     phone: "652152358",
@@ -172,18 +180,22 @@ const dataAdmin = [
     personalDescription: "Historiador y restaurador. Hay muchas historias que contar y en las que si no hacemos nada se perderan en el tiempo",
     economicContribution: 0,
     project_id: const6
-  }
+  },
 ]
+
+
 // 40.4131414,-4.7948265 Burgohondo // Casa Consistorial
 // 42.6695044,-8.7307837 Catoira // Romeria Vikinga
 // 42.2172423,-8.7139553 San Pedro de Sardoma // Productos Naturales
+
 const project = [{
   _id: const2,
   name: "Salvemos la casa consistorial de Burgohondo",
   location: {
     lat: 40.4131414,
     lon: -4.7948265
-  },
+  }
+,
   colaborationType: "Economic Maecenas",
   projectDescription: "Necesitamos dinero para restaurar la casa consistorial del pueblo, ayudanos a que este monumento no caiga en el olvido",
   projectTracking: "Empezando a recopilar dinero",
@@ -211,7 +223,8 @@ const project = [{
   colaborationType: "Technical Maecenas",
   projectDescription: "Necesitamos ayuda tecnica para comenzar la restauración del archivo local. Abogados para asesoramiento legal y restauradores para empezar el proyecto",
   adminId: const5
-}, ]​
+}, ]
+
 mongoose
   .connect('mongodb://localhost/lookingformecenas', {
     useNewUrlParser: true,
@@ -246,9 +259,3 @@ mongoose
   .catch(err => {
     console.error("Error connecting to mongo", err);
   });
-
-
-
-
-
-
