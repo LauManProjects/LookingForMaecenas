@@ -1,50 +1,50 @@
 <h1>Edita un proyecto</h1>
 
 <p>{{name}}</p>
-<p>{{lastName}}</p>
 
-<form action="/projects/edit-projects" method="POST">
+<form action="/projects/edit" method="POST">
 
-<div class="form-group">
-  <label for="id-input">Selecciona un Proyecto</label>
-  <input name="name" type="text" class="form-control" id="name-input">
-      <select name="select" id=""></select>
-      <option value=""></option>
+  <h2>Selecciona un Proyecto</h2>
+  
 
-</div>
+
 
   <div class="form-group">
+    <input name="id" id="name-input" value={{_id}}>
+    <br><br>
     <label for="name-input">Nombre</label>
     <input name="name" type="text" class="form-control" id="name-input" value={{name}}>
   </div>
   <div class="form-group">
     <label for="location-input">Localización</label>
-    <input name="location" type="text" class="form-control" id="location-input">
+    <input name="location" type="text" class="form-control" id="location-input" value={{location}}>
   </div>
   <div class="form-group">
     <label for="date-input">Fecha</label>
-    <input name="date" type="text" class="form-control" id="daten-input">
+    <input name="date" type="text" class="form-control" id="daten-input" value={{date}}>
   </div>
   <div class="form-group">
     <label for="colaborationType-input">Tipo de colaboración</label>
-    <input name="colaborationType" type="text" class="form-control" id="colaborationType-input">
+    <input name="colaborationType" type="text" class="form-control" id="colaborationType-input"
+      value={{colaborationType}}>
   </div>
   <div class="form-group">
     <label for="projectDescription-input">Descripción del proyecto</label>
-    <input name="projectDescription" type="text" class="form-control" id="projectDescription-input">
+    <input name="projectDescription" type="text" class="form-control" id="projectDescription-input"
+      value={{projectDescription}}>
   </div>
   <div class="form-group">
     <label for="projectTracking-input">Estado del proyecto</label>
-    <input name="projectTracking" type="text" class="form-control" id="projectTracking-input">
+    <input name="projectTracking" type="text" class="form-control" id="projectTracking-input" value={{projectTracking}}>
   </div>
   <div class="form-group">
     <label for="totalRaised-input">Total recaudado</label>
-    <input name="totalRaised" type="text" class="form-control" id="totalRaised-input">
+    <input name="totalRaised" type="text" class="form-control" id="totalRaised-input" value={{totalRaised}}>
   </div>
   <div class="form-group">
     <label for="totalRequired-input">Total requerido</label>
-    <input name="totalRequired" type="text" class="form-control" id="totalRequired-input">
+    <input name="totalRequired" type="text" class="form-control" id="totalRequired-input" value={{totalRequired}}>
   </div>
 
-  <button type="submit" class="btn btn-dark">Crear proyecto</button>
-  </form>
+  <button type="submit" class="btn btn-dark">Editar Proyecto</button>
+</form>

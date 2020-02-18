@@ -1,0 +1,16 @@
+<h1>Vas a eliminar un proyecto</h1>
+
+<p>{{name}}</p>
+
+<form action="/projects/delete" method="POST">
+
+<div class="form-group">
+  <input name="id" id="name-input" value={{_id}}>
+  <br><br>
+  <label for="name-input">Nombre</label>
+  <input name="name" type="text" class="form-control" id="name-input" value={{name}}>
+</div>
+
+
+<button type="submit" class="btn btn-dark">Eliminar Proyecto</button>
+</form>

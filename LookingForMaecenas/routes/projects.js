@@ -10,6 +10,17 @@ router.get('/', (req, res, next) => {
     .catch(err => next(new Error(err)))
 })
 
+router.get('/project/:id', (req, res, next) => {
+  Project.findById(req.params.id)
+    .then(project => {
+      res.json(project)
+      // res.render('projects/project', project)
+    })
+    .catch(err => next(new Error(err)))
+})
+
+
+
 router.get('/new-project', (req, res, next) => {
   res.render("projects/new-project")
 })
@@ -50,11 +61,6 @@ router.get('/:id', (req, res, next) => {
 })
 
 
-
-
-
-
-
 // router.post('/filter', (req, res, next) => {
 //   const tipoProyecto = req.body.tipos
 //   Project.find(tipoProyecto)
@@ -67,29 +73,66 @@ router.get("/edit/:id", (req, res) => {
   const id = req.params.id
 
   Project.findById(id)
-    .then(project=> res.render('projects/edit-projects', project))
+    .then(project => res.render('projects/edit-projects', project))
     .catch(err => next(new Error(err)))
 });
 
-router.post('/:id', (req, res, next) => {
-  Project
-    .findByIdAndUpdate({
-      _id: req.params.id
-    }, req.body)
-    .then(updatedProject => {
-      res.redirect('/allProjects')
+
+router.post('/edit', (req, res, next) => {
+  const {
+    name,
+    location,
+    date,
+    colaborationType,
+    projectDescription,
+    projectTracking,
+    totalRaised,
+    totalRequired,
+    //adminId
+  } = req.body
+  console.log(name)
+  Project.findByIdAndUpdate(req.body.id, {
+      name: name,
+      location: location,
+      date: date,
+      type: colaborationType,
+      projectDescription: projectDescription,
+      projectTracking: projectTracking,
+      totalRaised: totalRaised,
+      totalRequired: totalRequired
     })
+    .then((project) => res.json(project))
     .catch(err => next(new Error(err)))
 })
 
 
+router.get('/delete/:id', (req, res) => {
+  const id = req.params.id
+  Project.findById(id)
+    .then(project => res.render('projects/delete-projects', project))
+    .catch(err => next(new Error(err)))
+})
 
-// router.post('/:id', (req, res, next) => {
-//   const id = req.params.id
+router.post('/delete', (req, res, next) => {
+  const {
+    name,
+    location,
+    date,
+    colaborationType,
+    projectDescription,
+    projectTracking,
+    totalRaised,
+    totalRequired,
+    //adminId
+  } = req.body
+  console.log(name)
+  Project.findByIdAndDelete(req.body.id, {
 
-//   Project.findByIdAndDelete(id)
-//     .then(_ => res.redirect('/allProjects'))
-// })
+    })
+    .then(_ => res.redirect('/projects'))
+})
+
+
 
 
 

@@ -1,3 +1,39 @@
 
-  <h1>Un Proyecto</h1>
-  <img src="https://media.giphy.com/media/l0MYEqEzwMWFCg8rm/giphy.gif">
+  <h1>Soy un Proyecto</h1>
+    <img src="https://media.giphy.com/media/l0MYEqEzwMWFCg8rm/giphy.gif">
+
+
+  {{!-- {{#each projects}} --}}
+
+
+{{!-- {{/each}} --}}
+
+
+<div>
+
+<label for="name-input">Nombre</label>
+
+<p>{{project.name}}</p>
+
+<label for="location-input">Localización</label>
+<p></p>
+<label for="date-input">Fecha</label>
+<p></p>
+  <label for="projectDescription-input">Descripción del proyecto</label>
+<p></p>
+  <label for="projectTracking-input">Estado del proyecto</label>
+<p></p>
+  <label for="totalRaised-input">Total recaudado</label>
+<p></p>
+   <label for="totalRequired-input">Total requerido</label>
+<p></p>
+
+</div>
+
+
+<p>
+  <a href="projects/project{{this._id}}">{{this.name}}</a>
+  <a href="edit/:id?project_id={{this._id}}" class="edit-button">Editar Proyecto</a>
+</p>
+
+  
