@@ -1,17 +1,36 @@
 
-
-body {
+$base-color: #505050;
+.body {
+  background-color:#b7c4c4;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+header{
+  position: fixed;
+  width: 10vw;
+}
+#nav{
+  position: fixed;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav a {
   color: #0f6b6b;
 }
 
-
 .nav-item .nav-link {
   color: #0f6b6b;
+}
+
+.nav-logo{
+  display: flex;
+  
+  align-items: flex-end;
 }
 
 .selector-for-some-widget {
@@ -20,22 +39,45 @@ nav a {
 
 h1 {
   background-color: #0f6b6b;
-
+  color: #b7c4c4;
+  position: fixed;
   font-size: 1.3em;
   font-weight: bold;
   display: flex;
   justify-content: center;
 
 }
+///home
+
+.intro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro .index_img{
+  margin-top: 10px;
+  width: 70vw;
+  height: 70vh;
+}
 
 .container {
 
-  width: 90vw;
+  width: 100vw;
   height: 40vh;
 }
+.main {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 
 .footer {
-  font-size: 1.9em;
+  background-color: #0f6b6b;
+  font-size: 1.6em;
   text-align: center;
   list-style: none;
   padding: 40px 100px 40px 100px;
@@ -56,3 +98,4 @@ h1 {
   font-size: 0.8em;
   margin-top: 30;
 }
+

@@ -8,18 +8,26 @@
   {{!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> --}}
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{title}}</title>
+   <style>
+       #map {
+        height: 500px;
+        width: 100%;
+       }
+    </style>
 
   <link rel="stylesheet" href="/stylesheets/style.css" />
   <link rel="stylesheet" href="/stylesheets/reset.css">
-  <link rel="stylesheet" href="/styleshetts/style.sccs">
+  <link rel="stylesheet" href="/stylesheets/style.sccs">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 
 
 <body>
+
   <h1>Looking for Maecenas</h1>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,9 +41,11 @@
         <a class="nav-item nav-link" href="/projects">Proyectos</a>
         <a class="nav-item nav-link" href="../auths/signup">Signup</a>
         <a class="nav-item nav-link" href="../auths/login">Login</a>
-        <img src="/images/logo).png" width="100px" alt="">
       </div>
     </div>
+    <img class="nav-logo" src="images/logo.png" width="100px" alt="">
+    <header class="hero"></header>
+    </header>
   </nav>
 
 
@@ -51,7 +61,7 @@
       Paseo de la Chopera, 12<br>
       MAdrid,<br>
       España <br>
-    
+
     </address>
 
     <h5>Follow Us</h5>
