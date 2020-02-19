@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
+const Project = "../models/Project"
 
 const schemaUser = new Schema({
   name: {
@@ -52,7 +53,8 @@ const schemaUser = new Schema({
     type: Number
   },
   project_id: {
-    type: String
+    type: mongoose.Schema.Types.ObjectId,
+    ref: Project
   }
 }, {
   timestamps: true

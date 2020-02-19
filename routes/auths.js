@@ -102,7 +102,7 @@ router.post("/signup/:id", (req, res, next) => {
   const type = req.body.type;
   const personalDescription = req.body.personalDescription;
   const economicContribution = req.body.economicContribution;
-  const project_id = req.body.id
+  const project_id = req.body.project_id
 
   if (email === "" || password === "") {
     res.render("auths/signup", { message: "Indicate username and password" });
@@ -212,6 +212,14 @@ router.get("/private-admin-Projects", checkAdmin, (req,res) => {
     res.render("auths/projects", {project})
   })
 })
+
+// router.post("/private-admin-Projects", checkAdmin, (req,res) => {
+//   Project.find({adminId: req.user._id})
+//   .then((project) => {
+//     // res.json(project)
+//     res.render("auths/projects", {project})
+//   })
+// })
 
 router.post('/new-project', (req, res, next) => {
   const {
