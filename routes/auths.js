@@ -80,8 +80,6 @@ router.post("/signup", (req, res, next) => {
 });
 
 
-
-
 //SignUp Colaboradores
 //Añadir de la view el Id
 
