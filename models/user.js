@@ -16,7 +16,7 @@ const schemaUser = new Schema(
         type: {type: String, enum:["Admin", "Economic Maecenas", "Technical Maecenas", "Tourist Maecenas"], required: true},
         personalDescription: {type: String, required: true},
         economicContribution: {type: Number},
-        project_id: { type: Schema.Types.ObjectId, ref: 'Project'}
+        project_id: { type: String}
     },
     { timestamps: true }
   );

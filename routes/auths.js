@@ -102,7 +102,7 @@ router.post("/signup/:id", (req, res, next) => {
   const type = req.body.type;
   const personalDescription = req.body.personalDescription;
   const economicContribution = req.body.economicContribution;
-  const project_id = req.body.project_id
+  const project_id = req.body.id
 
   if (email === "" || password === "") {
     res.render("auths/signup", { message: "Indicate username and password" });
