@@ -1,7 +1,7 @@
 require('dotenv').config();
 const mongoose = require('mongoose')
-const User = require('../models/user')
-const Project = require('../models/project')
+const User = require('../models/User')
+const Project = require('../models/Project')
 const bcrypt = require("bcrypt")
 const bcryptSalt = 10;
 

@@ -1,12 +1,11 @@
 const express = require('express')
 const router = express.Router()
 
-const Project = require('../models/project')
-const User = require('../models/User')
+const Project = require('../models/Project')
 
 //Vistas generales
 
-router.get('/', (req, res, next) => {
+router.get('/', (req, res, next) => .. / views / layout.hbs {
   Project.find()
     // .then(projects => res.json({projects}))
     .then(projects => {
@@ -21,7 +20,7 @@ router.get('/', (req, res, next) => {
 
 router.get('/:id', (req, res, next) => {
   Project.findById(req.params.id)
-  .then(projects => {
+    .then(projects => {
       res.render('projects/project', projects)
     })
     .catch(err => next(new Error(err)))
