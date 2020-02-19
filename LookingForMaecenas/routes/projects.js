@@ -6,7 +6,9 @@ const User = require('../models/User')
 
 router.get('/', (req, res, next) => {
   Project.find()
-    .then(projects => res.json(projects))
+    .then(project => res.render('projects/allprojects', project))
+    //res.render('projects/allProjects')
+    //.then(projects => res.json(projects))
     .catch(err => next(new Error(err)))
 })
 

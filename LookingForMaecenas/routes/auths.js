@@ -20,6 +20,7 @@ const ensureLogin = require("connect-ensure-login");
 //Añadir de la view el Id
 
 router.get("/signup", (req, res, next) => {
+  console.log("Hola")
   res.render("auths/signup");
 });
 

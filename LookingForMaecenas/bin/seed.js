@@ -228,7 +228,7 @@ const project = [{
 
 
 mongoose
-  .connect(`${process.env.DBURl}`, {
+  .connect(`${process.env.DB_LOCAL}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
