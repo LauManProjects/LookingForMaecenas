@@ -16,6 +16,24 @@ router.get('/', (req, res, next) => {
     .catch(err => next(new Error(err)))
 })
 
+router.get('/api', (req, res, next) => {
+  Project.find()
+    .then(projects => res.json({projects}))
+    .catch(err => next(new Error(err)))
+})
+
+//Axios Vistas generales
+
+function getRestaurants() {
+  axios.get("/restaurants/api")
+   .then( response => {
+     placeRestaurants(response.data.restaurants);
+   })
+   .catch(error => {
+     console.log(error);
+   })
+ }
+
 //Vista individual
 
 router.get('/:id', (req, res, next) => {
