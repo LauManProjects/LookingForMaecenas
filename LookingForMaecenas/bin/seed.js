@@ -226,7 +226,7 @@ const project = [{
 }, ]
 
 mongoose
-  .connect('mongodb://localhost/lookingformecenas', {
+  .connect(process.env.DB_LOCAL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })

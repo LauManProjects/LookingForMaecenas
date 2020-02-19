@@ -1,7 +1,5 @@
 <h1>Holaaa, soy un nuevo proyecto 😃</h1>
-
-
-<form action="/projects/new-project" method="POST">
+<form action="/auths/new-project" method="POST">
   <div class="form-group">
     <label for="name-input">Nombre</label>
     <input name="name" type="text" class="form-control" id="name-input">
@@ -34,8 +32,12 @@
     <label for="totalRequired-input">Total requerido</label>
     <input name="totalRequired" type="text" class="form-control" id="totalRequired-input">
   </div>
-  
 
+  <div class="form-group">
+    <label for="totalRequired-input">Id</label>
+    <input name="adminId" type="text" class="form-control" id="totalRequired-input" value="{{_id}}">
+  </div>
 
   <button type="submit" class="btn btn-dark">Crear proyecto</button>
 </form>
+<a href="/auths/private-Admin">Menu Principal de Usuario</a>

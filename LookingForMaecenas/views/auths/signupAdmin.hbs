@@ -1,4 +1,5 @@
-<h2>Signup</h2>
+<h2>Crea tu propio proyecto</h2>
+<h3>Proporcionanos tus datos</h3>
 
 <form action="/auths/signup" method="POST" id="form-container">
   <label for="Nombre">Nombre</label>
@@ -19,34 +20,21 @@
   <label for="location">Location</label>
   <input id="location" type="text" name="location" placeholder="Pon tu domicilio" value="123">
   <br><br>
-  <label for="type">Tipo de colaboración</label>
-  <select name="type">
-    <option value="Admin">Admin</option>
-    <option value="Economic Maecenas" selected>Economic Maecenas</option>
-    <option value="Technical Maecenas" >Technical Maecenas</option>
-    <option value="Tourist Maecenas">Tourist Maecenas</option>
-  </select>
+  <label for="Type">Colaboration Type</label>
+  <input id="type" type="text" name="type" readonly="readonly" value="Admin">
   <br><br>
-  <label for="personalDescription">Describe tu tipo de colaboración</label>
+  <label for="personalDescription">Describete en pocas palabras</label>
   <input id="personalDescription" type="text" name="personalDescription" placeholder="¿Cómo eres?"  value="majo majo">
   <br><br>
-  <label for="economicContribution">Aportación economica</label>
-  <input id="economicContribution" type="Number" name="economicContribution" placeholder="¿Cuanto dinero vas a aportar?"  value="9999">
-  <br><br>
-  <label for="project_Id"></label>
-  <input id="project_Id" type="String" name="project_Id" placeholder="{{_id}}">
-
   {{#if message}}
   <div class="error-message">{{ message }}</div>
   {{/if}}
-  <br><br>
-
+  
   <button>Create account</button>
 
   <br><br>
   <h3 class="account-message">
     ¿Ya tienes una cuenta?
-    <br><br>
     <a href="/auths/login">Login</a>
   </p>
 </form>
