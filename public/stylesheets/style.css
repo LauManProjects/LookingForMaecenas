@@ -1,8 +1,54 @@
 body {
+
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
-a {
-  color: #00B7FF; }
+.nav-item .nav-link {
+  color:#0f6b6b;
+}
+
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+h1 {
+  background-color:#0f6b6b;
+  
+  font-size: 1.3em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+
+}
+
+.container{
+  
+  width: 90vw;
+  height: 40vh;
+}
+
+.footer {
+  font-size: 1.9em;
+  text-align: center;
+  list-style: none;
+  padding: 40px 100px 40px 100px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer a {
+  color:#0f6b6b;
+  text-decoration: none;
+  padding: 0
+}
+
+.address {
+  font-style: normal;
+  font-size: 0.8em;
+  margin-top: 30;
+}
 
 /*# sourceMappingURL=style.css.map */
+

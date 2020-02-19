@@ -1,16 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  {{!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> --}}
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{title}}</title>
+
   <link rel="stylesheet" href="/stylesheets/style.css" />
+  <link rel="stylesheet" href="/stylesheets/reset.css">
+  <link rel="stylesheet" href="/styleshetts/style.sccs">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
+
 <body>
+  <h1>Looking for Maecenas</h1>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="/">Home
+          <span class="sr-only">(current)</span>
+        </a>
+        <a class="nav-item nav-link" href="/projects">Proyectos</a>
+        <a class="nav-item nav-link" href="../auths/signup">Signup</a>
+        <a class="nav-item nav-link" href="../auths/login">Login</a>
+        {{!-- <img src="/public/images/4 (7).png" width="100px" alt=""> --}}
+      </div>
+    </div>
+  </nav>
+
 
   {{{body}}}
-
-  <script src="/javascripts/script.js"></script>
 </body>
+<footer class='dark-background footer' <ul>
+  <section>
+
+    <h5><b>Contact Information</b></h5>
+
+    <address class='address'>
+      IronHack <br>
+      Paseo de la Chopera, 12<br>
+      MAdrid,<br>
+      España <br>
+    
+    </address>
+
+    <h5>Follow Us</h5>
+
+    <li>
+      <a href="https://twitter.com/" target="_blank">Twitter</a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+    </li>
+    </ul>
+  </section>
+
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.142047744348!2d2.3354330160472316!3d48.87456857928921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e38f817b573%3A0x48d69c30470e7aeb!2sIronhack!5e0!3m2!1sen!2ses!4v1495208746099"
+    class="map-frame" frameborder="0" style="border:0" allowfullscreen></iframe>
+</footer>
+
+<script src="/javascripts/script.js"></script>
+<script src="https://kit.fontawesome.com/6bd48a564f.js" crossorigin="anonymous"></script>
+
 </html>
