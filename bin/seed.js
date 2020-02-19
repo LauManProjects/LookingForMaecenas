@@ -224,9 +224,6 @@ const project = [{
   adminId: const5
 }];
 
-
-
-
 mongoose
   .connect(process.env.DB_URL, {
     useNewUrlParser: true,
