@@ -1,4 +1,3 @@
-<!-- views/auth/signup.hbs -->
 <h2>Log In</h2>
 
 <form action="/auths/login" method="POST" id="form-container">
@@ -9,7 +8,7 @@
   <input id="password" type="password" name="password" placeholder="Your password" value="123">
 
   {{#if message}}
-    <div class="error-message">{{ message }}</div>
+  <div class="error-message">{{ message }}</div>
   {{/if}}
   <br><br>
 
@@ -19,5 +18,4 @@
     Do You want to colaborate?
     <a href="/">Sign Up</a>
   </p>
-</form
-
+</form>
