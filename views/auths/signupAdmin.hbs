@@ -1,0 +1,40 @@
+<h2>Crea tu propio proyecto</h2>
+<h3>Proporcionanos tus datos</h3>
+
+<form action="/auths/signup" method="POST" id="form-container">
+  <label for="Nombre">Nombre</label>
+  <input id="nombre" type="text" name="nombre" placeholder="JonSnow" value="dani">
+  <br><br>
+  <label for="apellidos">Apellidos</label>
+  <input id="apellidos" type="text" name="apellidos" placeholder="Pon tu Apellido" value="vicario">
+  <br><br>
+  <label for="email">Email</label>
+  <input id="email" type="email" name="email" placeholder="Pon tu Email"  value="test@test.com">
+  <br><br>
+  <label for="password">Password</label>
+  <input id="password" type="password" name="password" placeholder="Your password" value="123">
+  <br><br>
+  <label for="telefono">Telefono</label>
+  <input id="telefono" type="Number" name="telefono" placeholder="Pon tu Telefono" value="123">
+  <br><br>
+  <label for="location">Location</label>
+  <input id="location" type="text" name="location" placeholder="Pon tu domicilio" value="123">
+  <br><br>
+  <label for="Type">Colaboration Type</label>
+  <input id="type" type="text" name="type" readonly="readonly" value="Admin">
+  <br><br>
+  <label for="personalDescription">Describete en pocas palabras</label>
+  <input id="personalDescription" type="text" name="personalDescription" placeholder="¿Cómo eres?"  value="majo majo">
+  <br><br>
+  {{#if message}}
+  <div class="error-message">{{ message }}</div>
+  {{/if}}
+  
+  <button>Create account</button>
+
+  <br><br>
+  <h3 class="account-message">
+    ¿Ya tienes una cuenta?
+    <a href="/auths/login">Login</a>
+  </p>
+</form>

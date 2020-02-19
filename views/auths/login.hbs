@@ -1,0 +1,23 @@
+<!-- views/auth/signup.hbs -->
+<h2>Log In</h2>
+
+<form action="/auths/login" method="POST" id="form-container">
+  <label for="email">Email</label>
+  <input id="email" type="text" name="username" placeholder="JonSnow@gmail.com" value="test@test.com">
+  <br><br>
+  <label for="password">Password</label>
+  <input id="password" type="password" name="password" placeholder="Your password" value="123">
+
+  {{#if message}}
+    <div class="error-message">{{ message }}</div>
+  {{/if}}
+  <br><br>
+
+  <button>Log In</button>
+
+  <p class="account-message">
+    Do You want to colaborate?
+    <a href="/">Sign Up</a>
+  </p>
+</form
+
