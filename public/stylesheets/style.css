@@ -1,9 +1,12 @@
 body {
-
-  background-color:#b7c4c4;
+  background-color: #b7c4c4;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
- }
+}
+
+a {
+  color: #0f6b6b;
+}
 
 header {
   position: fixed;
@@ -24,12 +27,11 @@ nav a {
 }
 
 .nav-item .nav-link {
-  color:#0f6b6b;
+  color: #0f6b6b;
 }
 
 .nav-logo {
   display: flex;
-
   align-items: flex-end;
 }
 
@@ -38,19 +40,16 @@ nav a {
 }
 
 h1 {
-  background-color:#0f6b6b;
+  background-color: #0f6b6b;
   color: #b7c4c4;
   /* position: fixed; */
   font-size: 1.3em;
   font-weight: bold;
   display: flex;
   justify-content: center;
-
 }
 
 /* home */
-
-
 
 .intro {
   display: flex;
@@ -70,13 +69,38 @@ h1 {
   height: 60vh;
 }
 
+/* vista singupAdmin */
 
-.main {
-  
+#container-newproject {
+  margin-right: 300px;
+  margin-left: 300px;
+}
+
+/* ///// */
+
+#a-admin {
+  margin-left: 40%;
+}
+
+#main {
+  margin-top: 60px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-evenly;
+}
 
+#main .article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 370px;
+}
+
+#main .container .a {
+  color: #0f6b6b;
+}
+
+#main .container .img {
+  margin-top: 10px;
 }
 
 .footer {
@@ -85,6 +109,7 @@ h1 {
   text-align: center;
   list-style: none;
   padding: 40px 100px 40px 100px;
+  margin-top: 120px;
   margin-bottom: 25px;
   display: flex;
   justify-content: space-between;
@@ -92,7 +117,7 @@ h1 {
 }
 
 .footer a {
-  color:#b7c4c4;
+  color: #b7c4c4;
   text-decoration: none;
   padding: 0
 }
@@ -114,5 +139,23 @@ h1 {
   height: 400 px;
 }
 
-/*# sourceMappingURL=style.css.map */
+span {
+  color: #0f6b6b
+}
 
+#container-login {
+  margin-left: 43%;
+  margin-top: 8%;
+}
+
+#container-signup {
+  margin-left: 43%;
+}
+
+h2#login {
+  margin-left: 45;
+}
+
+
+
+/*# sourceMappingURL=style.css.map */

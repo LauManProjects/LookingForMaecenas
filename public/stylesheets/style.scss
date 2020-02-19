@@ -6,6 +6,10 @@ $base-color: #505050;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+*a{
+  color: #0f6b6b;
+}
+
 header{
   position: fixed;
   width: 10vw;
@@ -67,11 +71,28 @@ h1 {
   height: 40vh;
 }
 .main {
+display: flex;
+justify-content: space-evenly;
+}
 
+//login
+
+#login{
   display: flex;
   justify-content: center;
   align-items: center;
-
+}
+span{
+  color: #0f6b6b
+}
+.forgot{
+  color: #0f6b6b
+}
+$gray-light: #a0b3b0;
+$gray: #ddd;
+textarea {
+  border: 2px solid $gray-light;
+  resize: vertical;
 }
 
 

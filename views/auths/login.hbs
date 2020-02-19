@@ -1,21 +1,27 @@
-<h2>Log In</h2>
 
-<form action="/auths/login" method="POST" id="form-container">
-  <label for="email">Email</label>
+<h1 id="login">Log In</h1>
+<div id="container-login">
+
+<h3 id="login">¡Hola de nuevo!</h3>
+
+
+<form id="login" action="/auths/login" method="POST" id="form-container">
+  <label for="email">Email<span class="req">*</span></label>
   <input id="email" type="text" name="username" placeholder="JonSnow@gmail.com" value="test@test.com">
   <br><br>
-  <label for="password">Password</label>
+  <label for="password">Password<span class="req">*</label>
   <input id="password" type="password" name="password" placeholder="Your password" value="123">
-
+  <p class="forgot"><a href="#">Forgot Password?</a></p>
   {{#if message}}
   <div class="error-message">{{ message }}</div>
   {{/if}}
-  <br><br>
+
 
   <button>Log In</button>
 
   <p class="account-message">
-    Do You want to colaborate?
+    ¿Quieres colaborar?
     <a href="/">Sign Up</a>
   </p>
 </form>
+</div>
