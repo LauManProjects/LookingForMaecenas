@@ -5,7 +5,7 @@ const Project = require('../models/Project')
 
 //Vistas generales
 
-router.get('/', (req, res, next) => .. / views / layout.hbs {
+router.get('/', (req, res, next) => {
   Project.find()
     // .then(projects => res.json({projects}))
     .then(projects => {
