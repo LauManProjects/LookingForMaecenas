@@ -4,27 +4,42 @@ const router = express.Router()
 const Project = require('../models/project')
 const User = require('../models/User')
 
+//Vistas generales
+
 router.get('/', (req, res, next) => {
   Project.find()
-    .then(project => {
-      res.render('projects/allProjects', project)
+    // .then(projects => res.json({projects}))
+    .then(projects => {
+      res.render('projects/allProjects', {
+        projects
+      })
     })
     .catch(err => next(new Error(err)))
 })
+
+//Vista individual
+
+router.get('/:id', (req, res, next) => {
+  Project.findById(req.params.id)
+  .then(projects => {
+      res.render('projects/project', projects)
+    })
+    .catch(err => next(new Error(err)))
+})
+
+// Vista 
 
 router.get('/project/:id', (req, res, next) => {
   Project.findById(req.params.id)
-    .then(project => {
-      res.json(project)
-      // res.render('projects/project', project)
+    .then(projects => {
+      res.render('projects/project', projects)
     })
     .catch(err => next(new Error(err)))
 })
 
 
-
 router.get('/new-project', (req, res, next) => {
-  res.render("projects/new-project")
+  res.render("projects/login")
 })
 
 router.post('/new-project', (req, res, next) => {
@@ -56,11 +71,7 @@ router.post('/new-project', (req, res, next) => {
 })
 
 
-router.get('/:id', (req, res, next) => {
-  Project.findById(req.params.id)
-    .then(theProject => res.json(theProject))
-    .catch(err => next(new Error(err)))
-})
+
 
 
 // router.post('/filter', (req, res, next) => {

@@ -17,7 +17,7 @@ const MongoStore = require('connect-mongo')(session);
 const flash = require("connect-flash");
 
 mongoose
-  .connect("mongodb+srv://admin:admin@cluster0-tctvt.mongodb.net/test2?retryWrites=true&w=majority", {useNewUrlParser: true})
+  .connect('mongodb://localhost/lookingformecenas', {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })

@@ -1,22 +1,13 @@
 <h1>Todos los proyectos</h1>
-<p><{{name}}/p>
-<p><{{location}}/p>
-<p>{{date}}</p>
-<p>{{colaborationType}}</p>
-<p>{{projectDescription}}</p>
-<p><{{projectTracking}}/p>
-<p></p>
-<p></p>
+{{#each projects}}
+<ul>
+  <h2>{{name}}</h2>
+  <li>{{location}}</li>
+  <li>{{colaborationType}}</li>
+  <li>{{projectDescription}}</li>
+  <li>Total Necesario: {{totalRaised}} €</li>
+  <li>Total recaudado: {{totalRequired}} €</li>
+</ul>
+<a href="/projects/{{_id}}">Vete al proyecto individual</a>
+{{/each}}
 
-{{!-- name: {type: String, required: true},
-        location: {
-          lat: {type: Number},
-          lon: {type: Number}
-      },
-        date: {type: String},
-        colaborationType: {type: String, enum:["Economic Maecenas", "Technical Maecenas", "Tourist Maecenas"], required: true},
-        projectDescription: {type: String, required: true},
-        projectTracking: {type: String, timestamps: true }, 
-        totalRaised: {type: Number},
-        totalRequired: {type: Number},
-        adminId:{type: String} --}}

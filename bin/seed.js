@@ -180,7 +180,7 @@ const dataAdmin = [
     personalDescription: "Historiador y restaurador. Hay muchas historias que contar y en las que si no hacemos nada se perderan en el tiempo",
     economicContribution: 0,
     project_id: const6
-  }
+  },
 ]
 
 
@@ -223,10 +223,10 @@ const project = [{
   colaborationType: "Technical Maecenas",
   projectDescription: "Necesitamos ayuda tecnica para comenzar la restauración del archivo local. Abogados para asesoramiento legal y restauradores para empezar el proyecto",
   adminId: const5
-} ];
+}, ]
 
 mongoose
-  .connect("mongodb+srv://admin:admin@cluster0-tctvt.mongodb.net/test2?retryWrites=true&w=majority", {
+  .connect('mongodb://localhost/lookingformecenas', {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
