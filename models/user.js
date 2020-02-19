@@ -16,12 +16,7 @@ const schemaUser = new Schema(
         type: {type: String, enum:["Admin", "Economic Maecenas", "Technical Maecenas", "Tourist Maecenas"], required: true},
         personalDescription: {type: String, required: true},
         economicContribution: {type: Number},
-<<<<<<< HEAD:LookingForMaecenas/models/user.js
-        project_id: {type: String}
-        // project_id: { type: Schema.Types.ObjectId, ref: 'Project'}
-=======
         project_id: { type: String}
->>>>>>> manu:models/user.js
     },
     { timestamps: true }
   );
