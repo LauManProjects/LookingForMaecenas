@@ -1,19 +1,21 @@
 <h1>Edita tu Proyecto</h1>
 {{#each project}}
-
-<div class="box">
-  <ul>
-    <h2>{{name}}</h2>
-    <li><strong>Tipo de Colaboración</strong></li>
-    <li>{{colaborationType}}</li>
-    <li><strong>Descripcion del proyecto</strong></li>
-    <li>{{projectDescription}}</li>
-    <li><strong>Total Necesario</strong></li>
-    <li>{{totalRaised}} €</li>
-    <li><strong>Total Recaudado</strong></li>
-    <li>{{totalRequired}} €</li>
-    <li><button class="button-projects"><a href="/auths/private-Admin">Menu Principal de Usuario</a></button></li>
-  </ul>
+<div class="edit-box"> 
+  <form class="box-form" action="/auths/private-admin-edit" method="POST">
+    <input id="id" type="hidden" name="id" value="{{_id}}">
+    <label for="name">Nombre del proyecto</label>
+    <input id="nombre" type="text" name="name" placeholder="JonSnow" value="{{name}}">
+    <label for="name">Typo de colaboracion</label>
+    <input id="nombre" type="text" name="colaborationType" placeholder="{{colaborationType}}" value="{{colaborationType}}">
+    <label for="name">Descripcion del proyecto</label>
+    <input id="nombre" type="text" name="projectDescription" placeholder="{{projectDescription}}" value="{{projectDescription}}">
+    <label for="name">Total necesario</label>
+    <input id="nombre" type="text" name="totalRaised" placeholder="{{totalRaised}} " value="{{totalRaised}} ">
+    <label for="name">Total requerido</label>
+    <input id="nombre" type="text" name="totalRequired" placeholder="{{totalRequired}}" value="{{totalRequired}} ">
+    <button class="button-projects-edit" type="submit" class="btn btn-dark">Editar Proyecto</button>
+  </form>
   {{/each}}
-
 </div>
+<button class="button-projects-edit"><a href="/auths/private-Admin">Menu Principal de Usuario</a></button>
+

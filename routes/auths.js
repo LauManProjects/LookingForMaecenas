@@ -171,6 +171,8 @@ function checkRoles(role) {
   }
 }
 
+
+
 const checkAdmin  = checkRoles('Admin');
 const checkEconomic = checkRoles('Economic Maecenas');
 const checkTech = checkRoles('Technical Maecenas');
@@ -219,15 +221,7 @@ router.get("/private-admin-Edit", checkAdmin, (req,res) => {
   })
 })
 
-// router.post("/private-admin-Projects", checkAdmin, (req,res) => {
-//   Project.find({adminId: req.user._id})
-//   .then((project) => {
-//     // res.json(project)
-//     res.render("auths/projects", {project})
-//   })
-// })
-
-router.post('/new-project', (req, res, next) => {
+router.post('/private-admin-edit', (req, res, next) => {
   const {
     name,
     location,
@@ -237,31 +231,80 @@ router.post('/new-project', (req, res, next) => {
     projectTracking,
     totalRaised,
     totalRequired,
+    //adminId
+  } = req.body
+  console.log(name)
+  Project.findByIdAndUpdate(req.body.id, {
+      name: name,
+      location: location,
+      date: date,
+      type: colaborationType,
+      projectDescription: projectDescription,
+      projectTracking: projectTracking,
+      totalRaised: totalRaised,
+      totalRequired: totalRequired
+    })
+//     .then((project) => res.json(project))
+//     .catch(err => next(new Error(err)))
+// })
+// .then(res.redirect("/auths/projects"))
+
+router.post("/private-admin-Projects", checkAdmin, (req,res) => {
+  Project.find({adminId: req.user._id})
+  .then((project) => {
+    // res.json(project)
+    res.render("auths/projects", {project})
+  })
+})
+
+router.post('/new-project',  checkAdmin, (req, res, next) => {
+  console.log(JSON.stringify(req.body))
+  console.log("💩".repeat(100))
+
+  const {
+    name,
+    lat,
+    lon,
+    date,
+    colaborationType,
+    projectDescription,
+    projectTracking,
+    totalRaised,
+    totalRequired,
     adminId
   } = req.body
-  Project.create({
-      name,
-      location,
-      date,
-      colaborationType,
-      projectDescription,
-      projectTracking,
-      totalRaised,
-      totalRequired,
-      adminId
-    })
+console.log(lat)
+  let xxx = {
+    name,
+    location: {
+      type: "Point",
+      coordinates: [lat, lon]
+    },
+    date,
+    colaborationType,
+    projectDescription,
+    projectTracking,
+    totalRaised,
+    totalRequired,
+    adminId
+  }
 
-    .then(() => res.redirect('/auths/private-Admin'))
+  console.log(xxx)
+
+  Project.create(xxx)
+
+    // .then(() => res.redirect('/auths/private-Admin'))
+   .then(() => res.json(xxx))
     .catch(err => next(new Error(err)))
 })
 
 //Colaborador
 
-router.get("/private-colaborator", checkEconomic || checkTech ||  checkTourist, (req,res) => {
+router.get("/private-colaborator", checkEconomic || checkTech || checkTourist, (req,res) => {
   res.render("auths/private-Colaborator", req.user)
 })
 
-router.get("/private-colaborator-Projects", checkEconomic || checkTech ||  checkTourist, (req,res) => {
+router.get("/private-colaborator-Projects", checkEconomic || checkTech || checkTourist, (req,res) => {
   Project.findById(req.user.project_id)
   .then((project) => {
     // res.json(project)

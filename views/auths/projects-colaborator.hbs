@@ -1,10 +1,16 @@
-<h1>Todos los proyectos</h1>
-<ul>
-  <h2>{{name}}</h2>
-  <li>{{location}}</li>
-  <li>{{colaborationType}}</li>
-  <li>{{projectDescription}}</li>
-  <li>Total Necesario: {{totalRaised}} €</li>
-  <li>Total recaudado: {{totalRequired}} €</li>
-</ul>
-<a href="/auths/private-Colaborator">Menu Principal de Usuario</a>
+<h1>Todos tus proyectos</h1>
+<div class="box">
+  <ul>
+    <h2>{{name}}</h2>
+    <li><strong>Tipo de Colaboración</strong></li>
+    <li>{{colaborationType}}</li>
+    <li><strong>Descripcion del proyecto</strong></li>
+    <li>{{projectDescription}}</li>
+    <li><strong>Total Necesario</strong></li>
+    <li>{{totalRaised}} €</li>
+    <li><strong>Total Recaudado</strong></li>
+    <li>{{totalRequired}} €</li>
+  </ul>
+</div>
+
+<button class="button-projects"><a href="/auths/private-Colaborator">Menu Principal de Usuario</a></button>

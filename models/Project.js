@@ -7,11 +7,14 @@ const schemaProject = new Schema({
     required: true
   },
   location: {
-    lat: {
-      type: Number
+    type: {
+      type: String, // Don't do `{ location: { type: String } }`
+      enum: ['Point'], // 'location.type' must be 'Point'
+      // required: true
     },
-    lon: {
-      type: Number
+    coordinates: {
+      type: [Number],
+      // required: true
     }
   },
   date: {
@@ -19,8 +22,7 @@ const schemaProject = new Schema({
   },
   colaborationType: {
     type: String,
-    enum: ["Economic Maecenas", "Technical Maecenas", "Tourist Maecenas"],
-    required: true
+    enum: ["Economic Maecenas", "Technical Maecenas", "Tourist Maecenas"]
   },
   projectDescription: {
     type: String,

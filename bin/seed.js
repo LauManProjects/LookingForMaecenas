@@ -118,8 +118,8 @@ const dataAdmin = [
     phone: 689451235,
     type: "Economic Maecenas",
     location: {
-      lat: 42.6695044,
-      lon: -8.7307837
+      type: "Point",
+      coordinates: [42.6695044, -8.7307837]
     },
     personalDescription: "A veces 5 euros pueden suponer la diferencia. Aporta lo que puedas",
     economicContribution: 100,
@@ -192,8 +192,8 @@ const project = [{
   _id: const2,
   name: "Salvemos la casa consistorial de Burgohondo",
   location: {
-    lat: 40.4131414,
-    lon: -4.7948265
+    type: "Point",
+    coordinates: [40.4131414, -4.7948265]
   },
   colaborationType: "Economic Maecenas",
   projectDescription: "Necesitamos dinero para restaurar la casa consistorial del pueblo, ayudanos a que este monumento no caiga en el olvido",
@@ -205,8 +205,8 @@ const project = [{
   _id: const4,
   name: "Productos Naturales y charla",
   location: {
-    lat: 42.6695044,
-    lon: -8.7307837
+    type: "Point",
+    coordinates: [42.6695044, -8.7307837]
   },
   colaborationType: "Tourist Maecenas",
   projectDescription: "Ven a esta pequeña aldea de Vigo y compra los productos de mi granja",
@@ -216,8 +216,8 @@ const project = [{
   _id: const6,
   name: "Salvemos el archivo local de Catoira",
   location: {
-    lat: 42.2172423,
-    lon: -8.7139553
+    type: "Point",
+    coordinates: [42.2172423, -8.7139553]
   },
   colaborationType: "Technical Maecenas",
   projectDescription: "Necesitamos ayuda tecnica para comenzar la restauración del archivo local. Abogados para asesoramiento legal y restauradores para empezar el proyecto",
@@ -225,7 +225,7 @@ const project = [{
 }];
 
 mongoose
-  .connect(process.env.DB_URL, {
+  .connect(process.env.DB_LOCAL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })

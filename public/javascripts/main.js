@@ -27,8 +27,8 @@ function initMap() {
     console.log(projects)
     projects.projects.forEach(project => {
       const center = {
-        lat: project.location.lat,
-        lng: project.location.lon
+        lat: project.location.coordinates[0],
+        lng: project.location.coordinates[1]
       }
       console.log(project.name);
       new google.maps.Marker({

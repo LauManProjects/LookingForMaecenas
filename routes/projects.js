@@ -99,9 +99,8 @@ router.post('/new-project', (req, res, next) => {
 // })
 
 
-router.get("/edit/:id", (req, res) => {
+router.get("/edit", (req, res) => {
   const id = req.params.id
-
   Project.findById(id)
     .then(project => res.render('projects/edit-projects', project))
     .catch(err => next(new Error(err)))

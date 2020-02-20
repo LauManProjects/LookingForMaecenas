@@ -31,9 +31,10 @@ passport.use(new LocalStrategy(
         return;
       }
 
+      
       console.log("done 4")
-
       done(null, foundUser);
+      
     })
     .catch(err => {
       console.log(err)
