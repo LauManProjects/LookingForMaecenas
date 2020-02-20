@@ -1,6 +1,10 @@
 
 <section id="container-newproject">
-<h2>Crea tu propio proyecto</h2>
+<h1>Crea tu propio proyecto</h1>
+
+<div id="container-sigAdmin">
+<section class="box">
+
 <h3>Proporcionanos tus datos</h3>
 
 <form action="/auths/signup" method="POST" id="form-container">
@@ -32,7 +36,7 @@
   <div class="error-message">{{ message }}</div>
   {{/if}}
   
-  <button>Create account</button>
+  <button class="button-projects">Create account</button>
 
   <br><br>
   <h3 class="account-message">
@@ -40,4 +44,6 @@
     <a href="/auths/login">Login</a>
   </p>
 </form>
+
+</div>
 </section>

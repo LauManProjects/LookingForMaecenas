@@ -195,6 +195,8 @@ const project = [{
     type: "Point",
     coordinates: [40.4131414, -4.7948265]
   },
+  date: "18/02/2020",
+  imagen: '/images/burgohondo2.jpeg',
   colaborationType: "Economic Maecenas",
   projectDescription: "Necesitamos dinero para restaurar la casa consistorial del pueblo, ayudanos a que este monumento no caiga en el olvido",
   projectTracking: "Empezando a recopilar dinero",
@@ -203,14 +205,18 @@ const project = [{
   adminId: const1
 }, {
   _id: const4,
-  name: "Productos Naturales y charla",
+  name: "Venta de Productos Naturales y charla",
   location: {
     type: "Point",
     coordinates: [42.6695044, -8.7307837]
   },
+  date: "16/02/2020",
+  imagen: '/images/panes.jpeg',
   colaborationType: "Tourist Maecenas",
   projectDescription: "Ven a esta pequeña aldea de Vigo y compra los productos de mi granja",
   projectTracking: "Comenzando a desarrollar la economia local",
+  totalRaised: 50,
+  totalRequired: 1200,
   adminId: const3
 }, {
   _id: const6,
@@ -219,8 +225,12 @@ const project = [{
     type: "Point",
     coordinates: [42.2172423, -8.7139553]
   },
+  date: "13/01/2020",
+  imagen: '/images/catoira2.jpeg',
   colaborationType: "Technical Maecenas",
   projectDescription: "Necesitamos ayuda tecnica para comenzar la restauración del archivo local. Abogados para asesoramiento legal y restauradores para empezar el proyecto",
+  totalRaised: 340,
+  totalRequired: 1500,
   adminId: const5
 }];
 

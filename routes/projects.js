@@ -38,7 +38,8 @@ function getRestaurants() {
 
 router.get('/:id', (req, res, next) => {
   Project.findById(req.params.id)
-    .then(projects => {
+    .then((projects) => {
+      // res.json(projects)
       res.render('projects/project', projects)
     })
     .catch(err => next(new Error(err)))
