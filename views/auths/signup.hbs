@@ -1,5 +1,7 @@
 <h1>Signup</h1>
-<div id="#container-signup">
+
+<div id="container-login">
+  <section class="box">
 <form action="/auths/signup" method="POST" id="form-container">
   <label for="Nombre">Nombre</label>
   <input id="nombre" type="text" name="nombre" placeholder="JonSnow" value="dani">
@@ -40,13 +42,14 @@
   {{/if}}
   <br><br>
 
-  <button>Create account</button>
+  <button class="button-projects a">Create account</button>
 
   <br><br>
   <h3 class="account-message">
     ¿Ya tienes una cuenta?
     <br><br>
     <a href="/auths/login">Login</a>
+    </section>
     </p>
 </form>
 </div>

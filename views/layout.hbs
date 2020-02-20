@@ -8,25 +8,29 @@
   {{!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> --}}
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{title}}</title>
-   <style>
-       #map {
-        height: 500px;
-        width: 100%;
-       }
-    </style>
+  <style>
+    #map {
+      height: 500px;
+      width: 100%;
+    }
+  </style>
 
   <link rel="stylesheet" href="/stylesheets/style.css" />
   <link rel="stylesheet" href="/stylesheets/reset.css">
   <link rel="stylesheet" href="/stylesheets/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 
 </head>
 
 
 <body>
+  <div id="logo-home">
+    <img class="nav-logo" src="/images/logo.png" width="100px" alt="">
+    <h1 id="looking">Looking for Maecenas</h1>
 
-  <h1>Looking for Maecenas</h1>
+  </div>
   <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -43,7 +47,6 @@
         <a class="nav-item nav-link" href="../auths/login">Login</a>
       </div>
     </div>
-    <img class="nav-logo" src="/images/logo.png" width="100px" alt="">
     <header class="hero"></header>
     </header>
   </nav>
@@ -65,18 +68,23 @@
     </address>
 
     <h5>Follow Us</h5>
-
-    <li>
-      <a href="https://twitter.com/LMaecenas" target="_blank">Twitter</a>
-    </li>
-    <li>
-      <a href="https://www.facebook.com/" target="_blank">Facebook</a>
-    </li>
-    <li>
-      <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-    </li>
+    <ul>
+      <li>
+        <a href="https://twitter.com/LMaecenas" target="_blank">Twitter <img id="logo-social"
+            src="/images/logos-social/1.png" alt=""></a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/" target="_blank">Facebook <img id="logo-social"
+            src="/images/logos-social/3.png"></a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/" target="_blank">Instagram <img id="logo-social"
+            src="/images/logos-social/4.png"></a>
+      </li>
     </ul>
   </section>
+
+
 
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9669.542706841796!2d-3.6950296905228774!3d40.39365071683574!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xabdd7c33b07aefdb!2sIronhack!5e0!3m2!1ses!2ses!4v1582139302884!5m2!1ses!2ses"

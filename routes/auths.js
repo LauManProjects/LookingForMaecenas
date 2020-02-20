@@ -244,10 +244,9 @@ router.post('/private-admin-edit', (req, res, next) => {
       totalRaised: totalRaised,
       totalRequired: totalRequired
     })
-//     .then((project) => res.json(project))
-//     .catch(err => next(new Error(err)))
-// })
-// .then(res.redirect("/auths/projects"))
+    .then((project) => res.json(project))
+    .catch(err => next(new Error(err)))
+})
 
 router.post("/private-admin-Projects", checkAdmin, (req,res) => {
   Project.find({adminId: req.user._id})

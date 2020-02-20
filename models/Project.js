@@ -20,6 +20,9 @@ const schemaProject = new Schema({
   date: {
     type: String
   },
+  imagen: {
+    type: String
+  },
   colaborationType: {
     type: String,
     enum: ["Economic Maecenas", "Technical Maecenas", "Tourist Maecenas"]
