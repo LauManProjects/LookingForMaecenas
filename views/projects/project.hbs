@@ -1,12 +1,13 @@
-<h1>{{name}}l</h1>
+<h1>Descripción del proyecto</h1>
+<h1>{{name}}</h1>
 <div>
-  <ul>
-    <li>Localizacion: {{location}}</li>
-    <li>Fecha: {{date}}</li>
-    <li>Descripcion del proyecto: {{projectDescription}}</li>
-    <li>Estado del proyecto: {{proyectTracking}}</li>
-    <li>Total Recaudado: {{totalRaised}}</li>
-    <li>Total Necesario{{totalRequired}}</li>
+  <ul class="box">
+    <li class="location">Localizacion: {{location}}</li>
+    <li><strong>Fecha:</strong> {{date}}</li>
+    <li><strong>Descripcion del proyecto:</strong> {{projectDescription}}.</li>
+    <li><strong>Estado del proyecto:</strong> {{proyectTracking}}</li>
+    <li><strong>Total Recaudado: </strong>{{totalRaised}} €.</li>
+    <li><strong>Total Necesario:</strong>{{totalRequired}} €.</li>
   </ul>
-  <a href="/auths/signup/{{_id}}">Colabora con nosotros</a>
+  <a class="button-projects" href="/auths/signup/{{_id}}">Colabora con nosotros</a>
 </div>
