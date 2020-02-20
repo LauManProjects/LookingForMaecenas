@@ -49,6 +49,7 @@ h1 {
   justify-content: center;
 }
 
+
 /* home */
 
 .intro {
@@ -130,8 +131,8 @@ h1 {
 
 .footer .map-frame {
   display: flex;
-  height: 375px;
-  width: 60%;
+  height: 300px;
+  width: 50%;
 }
 
 #map {
