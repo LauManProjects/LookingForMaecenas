@@ -114,5 +114,12 @@ h1 {
   height: 400 px;
 }
 
+@media (man-width: 1000px) {
+  .container .index_img {
+    width: 40vw;
+    height: 30vh;
+    
+  }
+}
 /*# sourceMappingURL=style.css.map */
 
