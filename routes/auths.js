@@ -246,7 +246,7 @@ router.post('/private-admin-edit', (req, res, next) => {
     })
 //     .then((project) => res.json(project))
 //     .catch(err => next(new Error(err)))
-// })
+})
 // .then(res.redirect("/auths/projects"))
 
 router.post("/private-admin-Projects", checkAdmin, (req,res) => {
