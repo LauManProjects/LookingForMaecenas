@@ -1,21 +1,23 @@
 <h1>Todos los proyectos</h1>
-{{#each projects}}
-<ul>
-  <h2>{{name}}</h2>
-  <li>{{location}}</li>
-  <li>{{colaborationType}}</li>
-  <li>{{projectDescription}}</li>
-  <li>Total Necesario: {{totalRaised}} €</li>
-  <li>Total recaudado: {{totalRequired}} €</li>
-</ul>
-<a href="/projects/{{_id}}">Vete al proyecto individual</a>
-{{/each}}
+<div>
+    {{#each projects}}
+    <ul class="box">
+      <h2>{{name}}</h2>
+      {{!-- <li>{{location}}</li> --}}
+      <li><strong>Tipo de colaboración</strong></li>
+      <li>{{colaborationType}}</li>
+      <li><strong>Total Necesario:</strong></li>
+      <li>{{totalRaised}} €</li>
+      <li><strong>recaudado:</strong>
+      <li>{{totalRequired}} €</li>
+      <li><button class="button-projects"><a href="/projects/{{_id}}">Vete al proyecto individual</a></button></li>
+    </ul>
+    {{/each}}
+</div>
 
 <div id="map"></div>
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script type="text/javascript" src="/javascripts/main.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzR-IqTBa-42-yPOEhpmMoy1zGofyObRs&callback=initMap"></script>
-
-
-
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzR-IqTBa-42-yPOEhpmMoy1zGofyObRs&callback=initMap"></script>

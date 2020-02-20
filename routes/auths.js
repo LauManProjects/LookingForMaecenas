@@ -211,6 +211,14 @@ router.get("/private-admin-Projects", checkAdmin, (req,res) => {
   })
 })
 
+router.get("/private-admin-Edit", checkAdmin, (req,res) => {
+  Project.find({adminId: req.user._id})
+  .then((project) => {
+    // res.json({project})
+    res.render("auths/projects-edit", {project})
+  })
+})
+
 // router.post("/private-admin-Projects", checkAdmin, (req,res) => {
 //   Project.find({adminId: req.user._id})
 //   .then((project) => {
