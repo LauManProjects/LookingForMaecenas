@@ -158,5 +158,13 @@ h2#login {
 }
 
 
+@media (man-width: 1000px) {
+  .container .index_img {
+    width: 40vw;
+    height: 30vh;
+    
+  }
+}
+/*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */
