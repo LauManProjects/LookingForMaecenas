@@ -99,6 +99,10 @@ router.post('/new-project', (req, res, next) => {
 //     .catch(err => res.render('/views/error.hbs'))
 // })
 
+//Choose type Sign UP
+
+
+
 
 router.get("/edit", (req, res) => {
   const id = req.params.id

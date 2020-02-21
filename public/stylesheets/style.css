@@ -606,3 +606,50 @@ button.button-projects{
   text-decoration: none;
 }
 
+
+.button-all1 {
+  border: none;
+  border-radius: 10px;
+  background-color: #0f6b6b;
+  margin-top: 2em;
+  width: 20%;
+  /* margin-left: 2em; */
+  color: white;
+  padding: 5px;
+}
+
+.button-all1 a{
+  color: white;
+  text-decoration: none;
+}
+
+/* signup type */
+
+.area-typesignup {
+  height: 40vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button-signup {
+  width: 30%;
+  border: none;
+  border-radius: 10px;
+  background-color: #0f6b6b;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 3em;
+  font-size: 1em;
+}
+
+.button-signup a {
+  font-size: 2em;
+  color: white;
+}
+
+.button-signup a:hover {
+  color: white;
+  text-decoration: none;
+}
+

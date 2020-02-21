@@ -14,7 +14,15 @@ const passport = require("passport");
 // ensureLogin
 const ensureLogin = require("connect-ensure-login");
 
+
+
 //SignUp
+
+//Choose Sign Up
+
+router.get("/signup-type", (req, res, next) => {
+  res.render("auths/signupType");
+});
 
 //SignUp Administrador
 //Sin referencia a :id y redireccionar a create project.
@@ -30,7 +38,7 @@ router.post("/signup", (req, res, next) => {
   const phone = req.body.telefono;
   const password = req.body.password;
   const location = req.body.location;
-  const type = "Admin";
+  const type = req.body.type;
   const personalDescription = req.body.personalDescription;
   const economicContribution = req.body.economicContribution;
   const project_id = req.body.project_id;
@@ -212,6 +220,14 @@ router.get("/private-admin-Projects", checkAdmin, (req,res) => {
   .then((project) => {
     // res.json(project)
     res.render("auths/projects", {project})
+  })
+})
+
+router.get("/private-admin-colaborators", checkAdmin, (req,res) => {
+  User.find({project_id: req.user.project_id})
+  .then((project) => {
+    // res.json(project)
+    res.render("auths/projects-view-colaborator", {project})
   })
 })
 
