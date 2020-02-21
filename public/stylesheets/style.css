@@ -2,7 +2,12 @@
 
 }
 a{
-  white
+  color: white;
+}
+
+.followus {
+  display: flex;
+  justify-content: center;
 }
 
 a:hover {
@@ -357,6 +362,7 @@ span {
   /* margin-left: 2em; */
   color: white;
   padding: 5px;
+  text-decoration: none;
 }
 
 .button-projects {
@@ -398,7 +404,7 @@ span {
 
 .button-projects a:hover {
   color:white;
-  /* color: rgb(158, 207, 21); */
+  
   text-decoration: none;
 }
 
@@ -433,8 +439,8 @@ span {
 }
 
 #logo-social {
-  width: 20px;
-  height: 20px;
+  width: 3em;
+  height: 3em;
 }
 
 ul .location {
@@ -442,6 +448,12 @@ ul .location {
 }
 
 a.button-projects{
+  color: aliceblue;
+  padding: 10px;
+}
+
+a.button-projects:hover {
+  text-decoration: none;
   color: aliceblue;
   padding: 10px;
 }
@@ -488,6 +500,11 @@ button.button-projects{
   padding: 5px;
 }
 
+.button-description a:hover {
+  color: white;
+  text-decoration: none;
+}
+
 /* Sign Up */
 
 .box-signup {
@@ -517,6 +534,11 @@ button.button-projects{
   /* margin-left: 2em; */
   color: white;
   padding: 5px;
+}
+
+.button-signup1 a:hover{
+  color: white;
+  text-decoration: none;
 }
 
 .h-sign {
@@ -568,6 +590,10 @@ button.button-projects{
   padding: 5px;
 }
 
+.button-newproject a:hover {
+  color: white;
+  text-decoration: none;
+}
 
 .button-newproject1 {
   border: none;
@@ -578,6 +604,11 @@ button.button-projects{
   /* margin-left: 2em; */
   color: white;
   padding: 5px;
+}
+
+.button-newproject1 a:hover {
+  color: white;
+  text-decoration: none;
 }
 
 .allcontainer {
@@ -634,6 +665,17 @@ button.button-projects{
 }
 
 .button-all1 a{
+  color: white;
+  text-decoration: none;
+}
+
+.button-all a:hover {
+  color: white;
+  text-decoration: none;
+
+}
+
+.button-all1 a:hover{
   color: white;
   text-decoration: none;
 }
