@@ -1,6 +1,6 @@
 *{
-
 }
+
 a{
   color: white;
 }
@@ -284,6 +284,10 @@ span {
 
 .img-oneproject {
   width: 30%;
+  height: 30%;
+  max-height: 350px;
+  object-fit: cover;
+
 }
 
 /* Añadido por Manuel */
