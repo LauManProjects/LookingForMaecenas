@@ -1,18 +1,21 @@
 <h1>Todos tus proyectos</h1>
 {{#each project}}
-<div class="box">
-  <ul>
-    <h2>{{name}}</h2>
-    <li><strong>Tipo de Colaboración</strong></li>
-    <li>{{colaborationType}}</li>
-    <li><strong>Descripcion del proyecto</strong></li>
-    <li>{{projectDescription}}</li>
-    <li><strong>Total Necesario</strong></li>
-    <li>{{totalRaised}} €</li>
-    <li><strong>Total Recaudado</strong></li>
-    <li>{{totalRequired}} €</li>
-  </ul>
-  <button class="button-all1"><a href="/auths//private-admin-colaborators">Tus colaboradores</a></button>
+<div class="box-oneproject">
+  <div>
+    <ul>
+      <h2>{{name}}</h2>
+      <li><strong>Tipo de Colaboración</strong></li>
+      <li>{{colaborationType}}</li>
+      <li><strong>Descripcion del proyecto</strong></li>
+      <li>{{projectDescription}}</li>
+      <li><strong>Total Necesario</strong></li>
+      <li>{{totalRaised}} €</li>
+      <li><strong>Total Recaudado</strong></li>
+      <li>{{totalRequired}} €</li>
+    </ul>
+    <button class="button-all1"><a href="/auths//private-admin-colaborators">Tus colaboradores</a></button>
+  </div>
+  <img class="img-oneproject" src={{imagen}} alt="">
 </div>
 {{/each}}
 <button class="button-all"><a href="/auths/private-Admin">Menu Principal de Usuario</a></button>
