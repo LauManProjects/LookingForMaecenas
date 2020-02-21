@@ -1,19 +1,22 @@
 <h1>Tus Colaboradores</h1>
 {{#each project}}
-<div class="box">
-    <ul>
-        <h2>{{name}} {{lastName}}</h2>
-        <li><strong>Email</strong></li>
-        <li>{{email}}</li>
-        <li><strong>Telefono</strong></li>
-        <li>{{phone}}</li>
-        <li><strong>Tipo de Colaboracion</strong></li>
-        <li>{{type}} €</li>
-        <li><strong>Contribución economica al proyecto</strong></li>
-        <li>{{economicContribution}} €</li>
-        <li><strong>Descripción personal</strong></li>
-        <li>{{personalDescription}} €</li>
-    </ul>
+<div class="box-oneproject">
+    <div>
+        <ul>
+            <h2>{{name}} {{lastName}}</h2>
+            <li><strong>Email</strong></li>
+            <li>{{email}}</li>
+            <li><strong>Telefono</strong></li>
+            <li>{{phone}}</li>
+            <li><strong>Tipo de Colaboracion</strong></li>
+            <li>{{type}} €</li>
+            <li><strong>Contribución economica al proyecto</strong></li>
+            <li>{{economicContribution}} €</li>
+            <li><strong>Descripción personal</strong></li>
+            <li>{{personalDescription}} €</li>
+        </ul>
+    </div>
+    <img class="img-oneproject" src={{imagen}} alt="">
 </div>
 {{/each}}
 <div>

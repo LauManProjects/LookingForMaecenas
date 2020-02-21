@@ -51,6 +51,7 @@ const dataAdmin = [
     lastName: "Ptolomeo",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     email: "filogonio@gmail.com",
+    imagen: "/images/filogonio.jpeg",
     phone: 637125689,
     location: {
       lat: 42.6695044,
@@ -100,6 +101,7 @@ const dataAdmin = [
     lastName: apellidos[numApellidos],
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     email: `${nombres[numNombre].toLowerCase()}` + `${apellidos[numApellidos].toLowerCase()}` + "@gmail.com",
+    imagen: "/images/lau.jpg",
     phone: "658652893",
     location: {
       lat: 42.6695044,
@@ -115,6 +117,7 @@ const dataAdmin = [
     lastName: apellidos[numApellidos1],
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     email: `${nombres[numNombre1].toLowerCase()}` + `${apellidos[numApellidos1].toLowerCase()}` + "@gmail.com",
+    imagen: "/images/manu.jpeg",
     phone: 689451235,
     type: "Economic Maecenas",
     location: {

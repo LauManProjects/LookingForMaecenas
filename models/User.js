@@ -31,7 +31,7 @@ const schemaUser = new Schema({
       type: Number
     }
   },
-  image: {
+  imagen: {
     type: String
   },
   type: {
