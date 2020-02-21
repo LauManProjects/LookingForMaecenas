@@ -4,9 +4,11 @@
 <script
   src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places&key=AIzaSyBzR-IqTBa-42-yPOEhpmMoy1zGofyObRs="></script>
 
+<div class="allcontainer">
+
 <h1>Hola {{name}}, soy tu nuevo proyecto 😃</h1>
 
-<div class="edit">
+<div class="box-newproject">
   <form>
   {{!-- <form class="box-form" action="/auths/new-project" method="POST"> --}}
     <div class="form-group">
@@ -35,14 +37,16 @@
       <input name="adminId" type="hidden" class="form-control" id="totalRequired-input" value="{{_id}}">
     </div>
 
-  <button class="button-projects" id="submit"><a href="/auths/private-admin-Projects">Crea tu proyecto</a></button>
+  <button class="button-newproject" id="submit"><a href="/auths/private-admin-Projects">Crea tu proyecto</a></button>
   </form>
   
-  <button class="button-projects"><a href="/auths/private-Admin">Menu Principal de Usuario</a></button>
+  <button class="button-newproject1"><a href="/auths/private-Admin">Menu Principal de Usuario</a></button>
 
 </div>
 
 <div class="container" id="map-canvas"></div>
+
+</div>
 
 <script>
   
@@ -117,8 +121,3 @@
  
  
 
-
-
-
-
-</section>

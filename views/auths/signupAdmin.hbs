@@ -1,49 +1,35 @@
-
-<section id="container-newproject">
 <h1>Crea tu propio proyecto</h1>
 
-<div id="container-sigAdmin">
-<section class="box">
 
-<h3>Proporcionanos tus datos</h3>
+<div class="sigup-container">
 
-<form action="/auths/signup" method="POST" id="form-container">
-  <label for="Nombre">Nombre</label>
-  <input id="nombre" type="text" name="nombre" placeholder="JonSnow" value="dani">
-  <br><br>
-  <label for="apellidos">Apellidos</label>
-  <input id="apellidos" type="text" name="apellidos" placeholder="Pon tu Apellido" value="vicario">
-  <br><br>
-  <label for="email">Email</label>
-  <input id="email" type="email" name="email" placeholder="Pon tu Email"  value="test@test.com">
-  <br><br>
-  <label for="password">Password</label>
-  <input id="password" type="password" name="password" placeholder="Your password" value="123">
-  <br><br>
-  <label for="telefono">Telefono</label>
-  <input id="telefono" type="Number" name="telefono" placeholder="Pon tu Telefono" value="123">
-  <br><br>
-  <label for="location">Location</label>
-  <input id="location" type="text" name="location" placeholder="Pon tu domicilio" value="123">
-  <br><br>
-  <label for="Type">Colaboration Type</label>
-  <input id="type" type="text" name="type" readonly="readonly" value="Admin">
-  <br><br>
-  <label for="personalDescription">Describete en pocas palabras</label>
-  <input id="personalDescription" type="text" name="personalDescription" placeholder="¿Cómo eres?"  value="majo majo">
-  <br><br>
-  {{#if message}}
-  <div class="error-message">{{ message }}</div>
-  {{/if}}
-  
-  <button class="button-projects">Create account</button>
+  <h3>Proporcionanos tus datos</h3>
 
-  <br><br>
-  <h3 class="account-message">
-    ¿Ya tienes una cuenta?
-    <a href="/auths/login">Login</a>
-  </p>
-</form>
+  <form class="box-signupadmin" action="/auths/signup" method="POST" id="form-container">
+    <label for="Nombre">Nombre</label>
+    <input id="nombre" type="text" name="nombre" placeholder="JonSnow" value="dani">
+    <label for="apellidos">Apellidos</label>
+    <input id="apellidos" type="text" name="apellidos" placeholder="Pon tu Apellido" value="vicario">
+    <label for="email">Email</label>
+    <input id="email" type="email" name="email" placeholder="Pon tu Email" value="test@test.com">
+    <label for="password">Password</label>
+    <input id="password" type="password" name="password" placeholder="Your password" value="123">
+    <label for="telefono">Telefono</label>
+    <input id="telefono" type="Number" name="telefono" placeholder="Pon tu Telefono" value="123">
+    <label for="location">Location</label>
+    <input id="location" type="text" name="location" placeholder="Pon tu domicilio" value="123">
+    <label for="Type">Colaboration Type</label>
+    <input id="type" type="text" name="type" readonly="readonly" value="Admin">
+    <label for="personalDescription">Describete en pocas palabras</label>
+    <input id="personalDescription" type="text" name="personalDescription" placeholder="¿Cómo eres?" value="majo majo">
+    {{#if message}}
+    <div class="error-message">{{ message }}</div>
+    {{/if}}
+
+    <button type="submit" class="button-signup1">Create account</button>
+
+    <h3 class="h-sign">¿Ya tienes una cuenta?</h3>
+    <button class="button-signup1"><a href="/auths/login">Login</a></button>
+  </form>
 
 </div>
-</section>

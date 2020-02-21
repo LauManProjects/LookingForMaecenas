@@ -1,10 +1,21 @@
 *{
-  
+
 }
+a{
+  white
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
 body {
   background-color: #b7c4c4;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; 
+  padding: 0;
+  margin: 0;
   
 }
 
@@ -74,6 +85,7 @@ h1 {
   font-weight: bold;
   display: flex;
   justify-content: center;
+
 }
 
 h2 { 
@@ -84,30 +96,32 @@ h2 {
 /* home */
 
 #intro {
-  margin-left: 300px;
-  margin-top: 10px;
   background-image: url("../images/pueblopanoramic.jpg");
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   color: aliceblue;
   font-weight: bolder;
-  /* display: row; */
-  /* display: flex; */
-  /* flex-direction: column; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 70%;
   height: 500px;
+  margin: auto;
 }
 
 #intro p {
-  position: absolute;
+  /* position: absolute;
   top: 65%;
-  left: 28%;
-  font-family: cursive;
+  left: 28%; */
+  font-family: 'Lobster';
+  margin-top: 15em;
+  /* font-family: cursive; */
   font-size: 22px;
-  margin-right: 260px;
+  font-weight: bold;
   max-width: 800px;
+  text-align: center;
 }
 
 .index_img {
@@ -185,6 +199,7 @@ h2 {
 #map {
   width: 100%;
   height: 400 px;
+  margin-bottom: 0;
 }
 
 span {
@@ -218,6 +233,38 @@ span {
   }
   }
 
+/* Vista Proyectos sin autenticar*/
+
+.box-projects {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.button-allprojects {
+  border: none;
+  border-radius: 10px;
+  background-color: #0f6b6b;
+  margin-top: 1em;
+  margin-left: 0;
+  /* margin-left: 2em; */
+  color: white;
+  padding: 5px;
+}
+
+.button-allprojects a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.h-allprojects {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0.5em;
+}
 
 /* Añadido por Manuel */
 
@@ -292,17 +339,28 @@ span {
   border-radius: 10px;
   background-color: #0f6b6b;
   margin-top: 1em;
-  margin-left: 2em;
+  /* margin-left: 2em; */
   color: white;
   padding: 5px;
+}
+
+.button-projects {
+  color: white;
+  text-decoration: none;
 }
 
 #button-inbox {
   margin-bottom: 15px;
 }
 
-.button-projects .a {
+.button-inbox a:hover {
   color: white;
+  text-decoration: none;
+}
+
+.button-projects a:hover {
+  color: white;
+  text-decoration: none;
 }
 
 .button-projects-edit {
@@ -324,7 +382,8 @@ span {
 }
 
 .button-projects a:hover {
-  color: rgb(158, 207, 21);
+  color:white;
+  /* color: rgb(158, 207, 21); */
   text-decoration: none;
 }
 
@@ -394,3 +453,156 @@ button.button-projects{
 
 
 /*# sourceMappingURL=style.css.map */
+
+/* Project description */
+
+.project-description {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
+
+}
+
+.button-description {
+  border: none;
+  border-radius: 10px;
+  background-color: #0f6b6b;
+  margin-top: 1em;
+  margin-left: 1em;
+  color: white;
+  padding: 5px;
+}
+
+/* Sign Up */
+
+.box-signup {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 6em;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 1em;
+    padding: 2em
+}
+
+.sigup-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.button-signup1 {
+  border: none;
+  border-radius: 10px;
+  background-color: #0f6b6b;
+  margin: auto;
+  width: 60%;
+  /* margin-left: 2em; */
+  color: white;
+  padding: 5px;
+}
+
+.h-sign {
+  margin-top: 3em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+/* login */
+
+.box-login {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 6em;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 1em;
+  padding: 2em
+}
+
+.sigup-container label{
+  font-weight: bold;
+}
+
+/* new projex */
+
+.box-newproject {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 6em;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 1em;
+  padding: 2em
+}
+
+
+.button-newproject {
+  align-self: center;
+  border: none;
+  border-radius: 10px;
+  background-color: #0f6b6b;
+  margin-top: 1em;
+  width: 60%;
+  /* margin-left: 2em; */
+  color: white;
+  padding: 5px;
+}
+
+
+.button-newproject1 {
+  border: none;
+  border-radius: 10px;
+  background-color: #0f6b6b;
+  margin-top: 2em;
+  width: 30%;
+  /* margin-left: 2em; */
+  color: white;
+  padding: 5px;
+}
+
+.allcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* sign upadmin */
+
+.box-signupadmin {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 6em;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 1em;
+  padding: 2em
+}
+
+
+
+/* all projects */
+
+.button-all {
+  border: none;
+  border-radius: 10px;
+  background-color: #0f6b6b;
+  margin-top: 2em;
+  margin-left: 2em;
+  width: 20%;
+  /* margin-left: 2em; */
+  color: white;
+  padding: 5px;
+}
+
+.button-all a{
+  color: white;
+  text-decoration: none;
+}
+

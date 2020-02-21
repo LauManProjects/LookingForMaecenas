@@ -101,6 +101,7 @@ router.post("/signup/:id", (req, res, next) => {
   const personalDescription = req.body.personalDescription;
   const economicContribution = req.body.economicContribution;
   const project_id = req.body.project_id
+  
 
   if (email === "" || password === "") {
     res.render("auths/signup", { message: "Indicate username and password" });
@@ -129,10 +130,11 @@ router.post("/signup/:id", (req, res, next) => {
       economicContribution: economicContribution,
       project_id: project_id
     });
+    console.log(project_id)
     console.log(newUser)
     newUser.save((err) => {
       if (err) {
-        res.render("auths/signup", { message: "Something went wrong" });
+        res.render("auths/", { message: "Something went wrong" });
       } else {
         res.redirect("/auths/login");
       }
@@ -244,7 +246,7 @@ router.post('/private-admin-edit', (req, res, next) => {
       totalRaised: totalRaised,
       totalRequired: totalRequired
     })
-    .then((project) => res.json(project))
+    .then((project) => res.redirect("/auths/private-admin-Projects"))
     .catch(err => next(new Error(err)))
 })
 

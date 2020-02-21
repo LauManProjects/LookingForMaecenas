@@ -1,9 +1,12 @@
 <h1>Todos los proyectos</h1>
 <div class="box-dios">
-    {{#each projects}}
-    <div class="box-flex">
-    <ul class="box">
-      <h2>{{name}}</h2>
+  {{#each projects}}
+  <div class="box-projects box">
+    <div>
+      <img src={{imagen}} alt="fgodofdkof">
+    </div>
+    <ul>
+      <h2 class="h-allprojects">{{name}}</h2>
       {{!-- <li>{{location}}</li> --}}
       <li><strong>Tipo de colaboración</strong></li>
       <li>{{colaborationType}}</li>
@@ -11,14 +14,14 @@
       <li>{{totalRaised}} €</li>
       <li><strong>Total Necesario:</strong>
       <li>{{totalRequired}} €</li>
-      <li><button id="button-inbox" class="button-projects"><a href="/projects/{{_id}}">Vete al proyecto individual</a></button></li>
-      
-      
-      <img class="box-img" src={{imagen}} alt="fgodofdkof">
-      </div>
+      <li><button class="button-allprojects"><a href="/projects/{{_id}}">Vete al proyecto
+            individual</a></button></li>
     </ul>
+    
+  </div>
 
-    {{/each}}
+
+  {{/each}}
 </div>
 
 <div id="map"></div>

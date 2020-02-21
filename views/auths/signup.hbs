@@ -1,55 +1,41 @@
-<h1>Signup</h1>
+<h1>Colabora con un proyecto</h1>
 
-<div id="container-login">
-  <section class="box">
-<form action="/auths/signup" method="POST" id="form-container">
-  <label for="Nombre">Nombre</label>
-  <input id="nombre" type="text" name="nombre" placeholder="JonSnow" value="dani">
-  <br><br>
-  <label for="apellidos">Apellidos</label>
-  <input id="apellidos" type="text" name="apellidos" placeholder="Pon tu Apellido" value="vicario">
-  <br><br>
-  <label for="email">Email</label>
-  <input id="email" type="email" name="email" placeholder="Pon tu Email" value="test@test.com">
-  <br><br>
-  <label for="password">Password</label>
-  <input id="password" type="password" name="password" placeholder="Your password" value="123">
-  <br><br>
-  <label for="telefono">Telefono</label>
-  <input id="telefono" type="Number" name="telefono" placeholder="Pon tu Telefono" value="123">
-  <br><br>
-  <label for="location">Location</label>
-  <input id="location" type="text" name="location" placeholder="Pon tu domicilio" value="123">
-  <br><br>
-  <label for="type">Tipo de colaboración</label>
-  <select name="type">
-    <option value="Admin">Admin</option>
-    <option value="Economic Maecenas" selected>Economic Maecenas</option>
-    <option value="Technical Maecenas">Technical Maecenas</option>
-    <option value="Tourist Maecenas">Tourist Maecenas</option>
-  </select>
-  <br><br>
-  <label for="personalDescription">Describe tu tipo de colaboración</label>
-  <input id="personalDescription" type="text" name="personalDescription" placeholder="¿Cómo eres?" value="majo majo">
-  <br><br>
-  <label for="economicContribution">Aportación economica</label>
-  <input id="economicContribution" type="Number" name="economicContribution" placeholder="¿Cuanto dinero vas a aportar?"  value="9999">
-  
-  <input id="project_Id" type="hidden" name="project_id" value={{_id}}>
+<div class="sigup-container">
+  <form class="box-signup" action="/auths/signup" method="POST" id="form-container">
+    <label for="Nombre">Nombre</label>
+    <input id="nombre" type="text" name="nombre" placeholder="JonSnow" value="dani">
+    <label for="apellidos">Apellidos</label>
+    <input id="apellidos" type="text" name="apellidos" placeholder="Pon tu Apellido" value="vicario">
+    <label for="email">Email</label>
+    <input id="email" type="email" name="email" placeholder="Pon tu Email" value="test@test.com">
+    <label for="password">Password</label>
+    <input id="password" type="password" name="password" placeholder="Your password" value="123">
+    <label for="telefono">Telefono</label>
+    <input id="telefono" type="Number" name="telefono" placeholder="Pon tu Telefono" value="123">
+    <label for="location">Location</label>
+    <input id="location" type="text" name="location" placeholder="Pon tu domicilio" value="123">
+    <label for="type">Tipo de colaboración</label>
+    <select name="type">
+      <option value="Economic Maecenas" selected>Economic Maecenas</option>
+      <option value="Technical Maecenas">Technical Maecenas</option>
+      <option value="Tourist Maecenas">Tourist Maecenas</option>
+    </select>
+    <label for="personalDescription">Describe tu tipo de colaboración</label>
+    <input id="personalDescription" type="text" name="personalDescription" placeholder="¿Cómo eres?" value="majo majo">
+    <label for="economicContribution">Aportación economica</label>
+    <input id="economicContribution" type="Number" name="economicContribution"
+      placeholder="¿Cuanto dinero vas a aportar?" value="9999">
 
-  {{#if message}}
-  <div class="error-message">{{ message }}</div>
-  {{/if}}
-  <br><br>
+    <input id="project_Id" type="text" name="project_id" value={{_id}}>
 
-  <button class="button-projects a">Create account</button>
+    {{#if message}}
+    <div class="error-message">{{ message }}</div>
+    {{/if}}
 
-  <br><br>
-  <h3 class="account-message">
-    ¿Ya tienes una cuenta?
-    <br><br>
-    <a href="/auths/login">Login</a>
-    </section>
-    </p>
-</form>
+    <button type="submit" class="button-signup1" >Create account</button>
+
+    <h3 class="h-sign">¿Ya tienes una cuenta?</h3>
+    <button class="button-signup1"><a href="/auths/login">Login</a></button>
+  </form>
+
 </div>

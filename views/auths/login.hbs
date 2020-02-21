@@ -1,11 +1,8 @@
 
-<h1 id="login">Inicia sesión</h1>
-<div id="container-login">
-<section  class="box">
-<h3 id="login">¡Hola de nuevo!</h3>
-
-
-<form id="login" action="/auths/login" method="POST" id="form-container">
+<h1 >Inicia sesión</h1>
+<div class="sigup-container">
+{{!-- <h3 id="login">¡Hola de nuevo!</h3> --}}
+<form class="box-login" action="/auths/login" method="POST" id="form-container">
   <label for="email">Email<span class="req">*</span></label>
   <input id="email" type="text" name="username" placeholder="JonSnow@gmail.com" value="filogonio@gmail.com">
   <br><br>
@@ -15,14 +12,11 @@
   {{#if message}}
   <div class="error-message">{{ message }}</div>
   {{/if}}
-
-
-  <button class="button-projects">Log In</button>
-
-  <p class="account-message">
-    ¿Quieres colaborar?
-    <a href="/">Sign Up</a>
-  </p>
+  <button type="submit" class="button-signup1">Log In</button>
+  <h3 class="h-sign">¿Quieres colaborar?</h3>
+  <button class="button-signup1"><a href="/">Sign Up</a></button>
 </form>
 </div>
-</section>
+
+    
+    
