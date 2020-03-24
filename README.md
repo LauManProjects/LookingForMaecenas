@@ -1,7 +1,7 @@
 ![Looking For Maecenas](https://res.cloudinary.com/dagreomkt/image/upload/v1585077747/Captura_de_pantalla_2020-03-24_a_las_20.20.28_traz2e.png "Looking For Maecenas")
 # Looking for maecenas
 
-Página web creada con Mongo, Express, Node, Handlebars y una gran labor de equipo. ¡Gracias a Lau02!. 
+Página web creada con Mongo, Express, Node, Handlebars y una gran labor de equipo. ¡Gracias Lau02!. 
 
 Looking for Maecenas pretende buscar mecenas para la España vaciada.
 
