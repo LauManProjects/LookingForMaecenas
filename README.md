@@ -29,7 +29,7 @@ La idea de crear una página web (o por lo menos el concepto) de mecenazgo o mic
 ![Código](https://res.cloudinary.com/dagreomkt/image/upload/v1585078101/Captura_de_pantalla_2020-03-24_a_las_20.27.56_mlv4xk.png "Código")
 
 
-Si deseas ver la parte más técnica del proyecto solo debes realizar las siguientes acciones:
+Si deseas descargar el repositorio y ejecutar la página localmente sigue los siguientes pasos:
 
 Teclea en tu terminal (omite el simbolo ‘$’)
 
